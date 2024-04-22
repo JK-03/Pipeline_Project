@@ -1,0 +1,85 @@
+[
+{
+	"uri": "http://localhost:1313/cicd-ws/",
+	"title": " CI/CD Projects ",
+	"tags": [],
+	"description": "",
+	"content": "CI/CD Projects Overview Infomation \u0026hellip;.\nContent Introduction Prepairation Configuration Resource Cleanup "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.1-aws/",
+	"title": "AWS",
+	"tags": [],
+	"description": "",
+	"content": "Setting up AWS for Terraform Account CLI \u0026amp; Secret Key Create IAM user = tf-cli Permision = AdministratorAccess Download and store Secret \u0026amp; Access Key AWS Console process "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/1-intro/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "Infrastructure As Code with Terraform and AWS Overview HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share.\nYou can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle.\nTerraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.\nIn this workshop we will use Terraform with AWS to create VPC, Subnet, EC2 , Route table, Internet gateway, Security group\nContent Introduction Prepairation Terraform Configure Resource Cleanup "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/3-tfconfig/3.1-vpcsubnet/",
+	"title": "VPC &amp; Subnet",
+	"tags": [],
+	"description": "",
+	"content": "Run Terraform Terraform init Command: docker-compose run \u0026ndash;rm terraform init Terraform plan Command: docker-compose run \u0026ndash;rm terraform plan Input AWS Access and Secret key Terraform apply Command: docker-compose run \u0026ndash;rm terraform apply Input AWS Access and Secret key AWS Console Checking VPC \u0026amp; Subnet: "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.2-dockercompose/",
+	"title": "Docker Compose",
+	"tags": [],
+	"description": "",
+	"content": "Install \u0026amp; Run Docker Compose: Build Docker Compose for Terraform: docker-compose.yml Run Docker Compose:\nCommand: docker-compose run \u0026ndash;rm terraform version Check Docker Images: Command: docker images "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/2-prepair/",
+	"title": "Prepairation",
+	"tags": [],
+	"description": "",
+	"content": "Diagram for Workshop In this lab, we will be constructing a model based on the following diagram:\nContents AWS Docker Compose Terraform Git Hub "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.3-terraform/",
+	"title": "Terraform",
+	"tags": [],
+	"description": "",
+	"content": "Terraform code to deployment AWS Review Terraform configure files : main.tf : Resource blocks describe infrastructure objects like VPCs, subnets, route tables, and gateways provider.tf: Enables Terrafrom to interact with cloud providers and other APIs versions.tf: Sets version constaints for Terraform and optionally maps provides to a source address and version constaint terraform.tfvars: To set lots of variables, it is more convenient to specify their values in a variable definitions file variables.tf Input variables define reusable values and work like function arguments in general-purpose programming languages "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/3-tfconfig/",
+	"title": "Terraform Configure",
+	"tags": [],
+	"description": "",
+	"content": " Using Terraform to create VPC and Subnet via code Content Create VPC \u0026amp; Subnet "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.4-github/",
+	"title": "Github",
+	"tags": [],
+	"description": "",
+	"content": "Version control with Github Create Github Access Key : https://github.com/settings/tokens\nName: github_token_ws Expiration:\t90 days Select scopes: repo workflow Clone Source form Github: git clone https://**token**@github.com/NoNotNonez/ws-0001.git\nCopy Source code to Github Repo:\ncd /ws-0001/terraform Create .gitignore:\nto security and prevent important file upload to github Push Source code to Git Repo:\ngit status git add . git commit -m \u0026ldquo;Add Tf source\u0026rdquo; git push "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/4-cleanup/",
+	"title": "Resource Cleanup",
+	"tags": [],
+	"description": "",
+	"content": "Clean up resources We will proceed to delete the resources in the following order:\nTerrafrom destroy: Run command: docker-compose run \u0026ndash;rm terraform destroy Import Secret \u0026amp; Access Key Checking AWS Console: Local Check:\nRun command: docker system prune -a docker images "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

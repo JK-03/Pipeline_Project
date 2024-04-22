@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/cicd-ws/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/2-prepair/2.1-aws/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/1-intro/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/3-tfconfig/3.1-vpcsubnet/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/2-prepair/2.2-dockercompose/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/2-prepair/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/2-prepair/2.3-terraform/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/3-tfconfig/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/2-prepair/2.4-github/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/4-cleanup/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/tags/</loc>
+  </url>
+</urlset>
