@@ -6,26 +6,51 @@ chapter : false
 pre : " <b> 2.3 </b> "
 ---
 
-## Terraform code to deployment AWS
+#### Run Terraform in containter:
+Run docker compose: 
+```dockercompose
+ docker-compose run --rm terraform version
+```
+![23](/cicd-ws/images/2-prepair/2.3-terraform/1.png)
 
-- **Review Terraform configure files** :
-    - **main.tf** :
-         Resource blocks describe infrastructure objects like VPCs, subnets, route tables, and gateways
-   ![23](/ws-0001/images/2-prepair/2.3-terraform/5-main.png)
+#### Terraform configuration
 
-    - **provider.tf**:
-        Enables Terrafrom to interact with cloud providers and other APIs
-    ![23](/ws-0001/images/2-prepair/2.3-terraform/2-provider.png)
+Terraform provider aws:  **versions.tf**
 
-    - **versions.tf**:
-        Sets version constaints for Terraform and optionally maps provides to a source address and version constaint
-    ![23](/ws-0001/images/2-prepair/2.3-terraform/1-versions.png)
+```dockercompose
+ terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.16"
+    }
+  }
 
-    - **terraform.tfvars**:
-        To set lots of variables, it is more convenient to specify their values in a variable definitions file
-    ![23](/ws-0001/images/2-prepair/2.3-terraform/4-tfvars.png)
+  required_version = ">= 1.2.0"
+}
+```
+Security credential variables:  **variables.tf**
 
-    - **variables.tf**
-        Input variables define reusable values and work like function arguments in general-purpose programming languages
-    ![23](/ws-0001/images/2-prepair/2.3-terraform/3-variables.png)
+```dockercompose
+variable "access_key" {
+  type        = string
+  sensitive   = true
+}
 
+variable "secret_key" {
+  type        = string
+  sensitive   = true
+}
+
+variable "region" {
+  type        = string
+  default     = "ap-southeast-1"
+}
+```
+
+
+Terraform init:
+```dockercompose
+ docker-compose run --rm terraform init
+```
+![23](/cicd-ws/images/2-prepair/2.3-terraform/2.png)

@@ -7,25 +7,11 @@ pre : " <b> 4. </b> "
 ---
 ## Clean up resources
 
-We will proceed to delete the resources in the following order:
+All processing to clearn up all the resources
 
-1. Terrafrom destroy:
- - Run command: **docker-compose run --rm terraform destroy**
- - Import **Secret & Access Key**
-![4](/ws-0001/images/4-cleanup/1-tfdestroy.png)
-![4](/ws-0001/images/4-cleanup/1-tfdestroy-2.png)
-![4](/ws-0001/images/4-cleanup/1-tfdestroy-3.png)
-      
-2. Checking AWS Console:
-![4](/ws-0001/images/4-cleanup/2-1-awsvpc.png)
-![4](/ws-0001/images/4-cleanup/2-2-awssubnet.png)
+## Content
 
-3. Local Check:
- - Run command:
-   - **docker system prune -a**
-   - **docker images**
-![4](/ws-0001/images/4-cleanup/3-dockerlocal.png)
-
-
+1. [EC2](4.1-ec2/)
+2. [Jenkins](4.2-jenkins/)
 
 

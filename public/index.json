@@ -4,59 +4,73 @@
 	"title": " CI/CD Projects ",
 	"tags": [],
 	"description": "",
-	"content": "CI/CD Projects Overview Infomation \u0026hellip;.\nContent Introduction Prepairation Configuration Resource Cleanup "
+	"content": "CI/CD Projects Overview Infomation \u0026hellip;.\nContent Introduction Prepairation Configuration Cleanup "
 },
 {
-	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.1-aws/",
-	"title": "AWS",
+	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.1-docker/",
+	"title": "Docker",
 	"tags": [],
 	"description": "",
-	"content": "Setting up AWS for Terraform Account CLI \u0026amp; Secret Key Create IAM user = tf-cli Permision = AdministratorAccess Download and store Secret \u0026amp; Access Key AWS Console process "
+	"content": "Docker \u0026amp; Docker Compose status: Run commands:\ndocker --version docker-compose --version Create Docker Compose file docker-compose.yml version: \u0026#39;3\u0026#39;\rservices:\r# Terraform\rterraform:\rimage: hashicorp/terraform:latest\rvolumes:\r- .:/terraform\rworking_dir: /terraform\r# AWS CLI\u0026#39;\raws:\rimage: anigeo/awscli\renvironment:\rAWS_ACCESS_KEY_ID: \u0026#34;${AWS_ACCESS_KEY_ID}\u0026#34;\rAWS_SECRET_ACCESS_KEY: \u0026#34;${AWS_SECRET_ACCESS_KEY}\u0026#34;\rAWS_REGION: \u0026#34;${AWS_REGION}\u0026#34;\rAWS_DEFAULT_REGION: ap-southeast-1\rvolumes:\r- $PWD:/app\rworking_dir: /app "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/3-config/3.1-ec2/",
+	"title": "EC2",
+	"tags": [],
+	"description": "",
+	"content": "In this Workshop we will create an EC2 instances with the information bellow:\nAWS EC2 Configuration: Instances name: Web-Server VPC: 10.0.0.0/16 Subnets: 10.0.1.0/24 Region: Singapore (ap-southeast-1) Available zone: ap-southeast-1b Instance type: t2.micro Amazon Machine Images: Amazon Linux 2 AMI Key pair: tf-cli-keypair Security setting: Only allow my ip connect SSH to EC2 instance Allow all access from port 8080 to EC2 instance Terraform configuration Security credential variables: variables.tf\nvariable \u0026#34;access_key\u0026#34; {\rtype = string\rsensitive = true\r}\rvariable \u0026#34;secret_key\u0026#34; {\rtype = string\rsensitive = true\r}\rvariable \u0026#34;region\u0026#34; {\rtype = string\rdefault = \u0026#34;ap-southeast-1\u0026#34;\r} Instances configurations :main.tf\nvariable vpc_cidr_block {}\rvariable subnet_1_cidr_block {}\rvariable avail_zone {}\rvariable env_prefix {}\rvariable instance_type {}\rvariable my_ip {}\rvariable ami_id {}\rresource \u0026#34;aws_vpc\u0026#34; \u0026#34;myapp-vpc\u0026#34; {\rcidr_block = var.vpc_cidr_block\rtags = {\rName = \u0026#34;${var.env_prefix}-vpc\u0026#34;\r}\r}\rresource \u0026#34;aws_subnet\u0026#34; \u0026#34;myapp-subnet-1\u0026#34; {\rvpc_id = aws_vpc.myapp-vpc.id\rcidr_block = var.subnet_1_cidr_block\ravailability_zone = var.avail_zone\rtags = {\rName = \u0026#34;${var.env_prefix}-subnet-1\u0026#34;\r}\r}\rresource \u0026#34;aws_security_group\u0026#34; \u0026#34;myapp-sg\u0026#34; {\rname = \u0026#34;myapp-sg\u0026#34;\rvpc_id = aws_vpc.myapp-vpc.id\ringress {\rfrom_port = 22\rto_port = 22\rprotocol = \u0026#34;tcp\u0026#34;\rcidr_blocks = [\u0026#34;0.0.0.0/0\u0026#34;]\r}\ringress {\rfrom_port = 8080\rto_port = 8080\rprotocol = \u0026#34;tcp\u0026#34;\rcidr_blocks = [\u0026#34;0.0.0.0/0\u0026#34;]\r}\regress {\rfrom_port = 0\rto_port = 0\rprotocol = \u0026#34;-1\u0026#34;\rcidr_blocks = [\u0026#34;0.0.0.0/0\u0026#34;]\rprefix_list_ids = []\r}\rtags = {\rName = \u0026#34;${var.env_prefix}-sg\u0026#34;\r}\r}\rresource \u0026#34;aws_internet_gateway\u0026#34; \u0026#34;myapp-igw\u0026#34; {\rvpc_id = aws_vpc.myapp-vpc.id\rtags = {\rName = \u0026#34;${var.env_prefix}-internet-gateway\u0026#34;\r}\r}\rresource \u0026#34;aws_route_table\u0026#34; \u0026#34;myapp-route-table\u0026#34; {\rvpc_id = aws_vpc.myapp-vpc.id\rroute {\rcidr_block = \u0026#34;0.0.0.0/0\u0026#34;\rgateway_id = aws_internet_gateway.myapp-igw.id\r}\r# default route, mapping VPC CIDR block to \u0026#34;local\u0026#34;, created implicitly and cannot be specified.\rtags = {\rName = \u0026#34;${var.env_prefix}-route-table\u0026#34;\r}\r}\r# Associate subnet with Route Table\rresource \u0026#34;aws_route_table_association\u0026#34; \u0026#34;a-rtb-subnet\u0026#34; {\rsubnet_id = aws_subnet.myapp-subnet-1.id\rroute_table_id = aws_route_table.myapp-route-table.id\r}\routput \u0026#34;server-ip\u0026#34; {\rvalue = aws_instance.myapp-server.public_ip\r}\rresource \u0026#34;aws_instance\u0026#34; \u0026#34;myapp-server\u0026#34; {\rami = var.ami_id\rinstance_type = var.instance_type\rkey_name = \u0026#34;tf-cli-keypair\u0026#34;\rassociate_public_ip_address = true\rsubnet_id = aws_subnet.myapp-subnet-1.id\rvpc_security_group_ids = [aws_security_group.myapp-sg.id]\ravailability_zone\t= var.avail_zone\rtags = {\rName = \u0026#34;${var.env_prefix}-server\u0026#34;\r}\r} Terraform provider aws: terraform.tfvars\n# Network and Instance variables\rvpc_cidr_block = \u0026#34;10.0.0.0/16\u0026#34;\rsubnet_1_cidr_block = \u0026#34;10.0.1.0/24\u0026#34;\ravail_zone = \u0026#34;ap-southeast-1b\u0026#34;\renv_prefix = \u0026#34;web\u0026#34;\rmy_ip = \u0026#34;\u0026lt;myip\u0026gt;/32\u0026#34;\rami_id = \u0026#34;ami-04f73ca9a4310089f\u0026#34; Installation Terraform plan:\ndocker-compose run –rm terraform plan Terraform apply:\ndocker-compose run --rm terraform apply --auto-approve AWS Instance checking: Add Keypair permission:\nchmod 400 tf-cli-keypair.pem SSH to EC2 Instances:\nssh -i tf-cli-keypair.pem ec2-user@13.250.64.49 AWS Instance checking: "
 },
 {
 	"uri": "http://localhost:1313/cicd-ws/1-intro/",
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
-	"content": "Infrastructure As Code with Terraform and AWS Overview HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share.\nYou can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle.\nTerraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.\nIn this workshop we will use Terraform with AWS to create VPC, Subnet, EC2 , Route table, Internet gateway, Security group\nContent Introduction Prepairation Terraform Configure Resource Cleanup "
+	"content": "Infrastructure As Code with Terraform and AWS Overview HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share.\nYou can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle.\nTerraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.\nIn this workshop we will use Terraform with AWS to create VPC, Subnet, EC2 , Route table, Internet gateway, Security group\nContent Introduction Prepairation Configure Cleanup "
 },
 {
-	"uri": "http://localhost:1313/cicd-ws/3-tfconfig/3.1-vpcsubnet/",
-	"title": "VPC &amp; Subnet",
+	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.2-aws/",
+	"title": "AWS",
 	"tags": [],
 	"description": "",
-	"content": "Run Terraform Terraform init Command: docker-compose run \u0026ndash;rm terraform init Terraform plan Command: docker-compose run \u0026ndash;rm terraform plan Input AWS Access and Secret key Terraform apply Command: docker-compose run \u0026ndash;rm terraform apply Input AWS Access and Secret key AWS Console Checking VPC \u0026amp; Subnet: "
+	"content": "AWS Configuration Run AWS CLI in container: Run docker compose:\ndocker-compose run --rm aws --version Create AWS Keypair to access AWS Instances Create user: tf-cli-keypair.pem\ndocker-compose run --rm aws ec2 create-key-pair --key-name tf-cli-keypair --query \u0026#39;KeyMaterial\u0026#39; --output text \u0026gt; tf-cli-keypair.pem Create AWS Account for Terraform use AWS CLI Create user: tf-cli\ndocker-compose run --rm aws iam create-user --user-name tf-cli AWS Checking Keypair: Create Access Key \u0026amp; export to local\ndocker-compose run --rm aws iam create-access-key --user-name tf-cli \u0026gt; tf_cli-access_key.json Create policy and allow access EC2 and Limit Region\nCreate a custom policy file: ec2-limited-access-policy.json {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: \u0026#34;ec2:*\u0026#34;,\r\u0026#34;Resource\u0026#34;: \u0026#34;*\u0026#34;,\r\u0026#34;Condition\u0026#34;: {\r\u0026#34;StringEquals\u0026#34;: {\r\u0026#34;ec2:Region\u0026#34;: \u0026#34;ap-southeast-1\u0026#34;\r}\r}\r}\r]\r} Create a IAM policy: EC2FullAccessAPSouthEast1 docker-compose run --rm aws iam create-policy --policy-name EC2FullAccessAPSouthEast1 --policy-document file://ec2-limited-access-policy.json Attach the Policy to the IAM User: (tf-cli) docker-compose run --rm aws iam attach-user-policy --user-name tf-cli --policy-arn arn:aws:iam::637423373411:policy/EC2FullAccessAPSouthEast1 AWS Checking User: "
 },
 {
-	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.2-dockercompose/",
-	"title": "Docker Compose",
+	"uri": "http://localhost:1313/cicd-ws/3-config/3.2-jenkins/",
+	"title": "Jenkins",
 	"tags": [],
 	"description": "",
-	"content": "Install \u0026amp; Run Docker Compose: Build Docker Compose for Terraform: docker-compose.yml Run Docker Compose:\nCommand: docker-compose run \u0026ndash;rm terraform version Check Docker Images: Command: docker images "
+	"content": "Updating \u0026hellip;.\n"
 },
 {
 	"uri": "http://localhost:1313/cicd-ws/2-prepair/",
 	"title": "Prepairation",
 	"tags": [],
 	"description": "",
-	"content": "Diagram for Workshop In this lab, we will be constructing a model based on the following diagram:\nContents AWS Docker Compose Terraform Git Hub "
+	"content": "Diagram for Workshop In this lab, we will be constructing a model based on the following diagram:\nContents Docker AWS Teraform Git "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/3-config/",
+	"title": "Configuration",
+	"tags": [],
+	"description": "",
+	"content": " Using Terraform to automate IaC Content EC2 jenkins "
 },
 {
 	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.3-terraform/",
 	"title": "Terraform",
 	"tags": [],
 	"description": "",
-	"content": "Terraform code to deployment AWS Review Terraform configure files : main.tf : Resource blocks describe infrastructure objects like VPCs, subnets, route tables, and gateways provider.tf: Enables Terrafrom to interact with cloud providers and other APIs versions.tf: Sets version constaints for Terraform and optionally maps provides to a source address and version constaint terraform.tfvars: To set lots of variables, it is more convenient to specify their values in a variable definitions file variables.tf Input variables define reusable values and work like function arguments in general-purpose programming languages "
+	"content": "Run Terraform in containter: Run docker compose:\ndocker-compose run --rm terraform version Terraform configuration Terraform provider aws: versions.tf\nterraform {\rrequired_providers {\raws = {\rsource = \u0026#34;hashicorp/aws\u0026#34;\rversion = \u0026#34;~\u0026gt; 4.16\u0026#34;\r}\r}\rrequired_version = \u0026#34;\u0026gt;= 1.2.0\u0026#34;\r} Security credential variables: variables.tf\nvariable \u0026#34;access_key\u0026#34; {\rtype = string\rsensitive = true\r}\rvariable \u0026#34;secret_key\u0026#34; {\rtype = string\rsensitive = true\r}\rvariable \u0026#34;region\u0026#34; {\rtype = string\rdefault = \u0026#34;ap-southeast-1\u0026#34;\r} Terraform init:\ndocker-compose run --rm terraform init "
 },
 {
-	"uri": "http://localhost:1313/cicd-ws/3-tfconfig/",
-	"title": "Terraform Configure",
+	"uri": "http://localhost:1313/cicd-ws/4-cleanup/4.1-ec2/",
+	"title": "EC2",
 	"tags": [],
 	"description": "",
-	"content": " Using Terraform to create VPC and Subnet via code Content Create VPC \u0026amp; Subnet "
+	"content": "Clean up resources We will process to clearn up all the resources\nTerraform: Run docker compose:\ndocker-compose run --rm terraform destroy --auto-approve AWS Checking "
 },
 {
-	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.4-github/",
+	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.4-git/",
 	"title": "Github",
 	"tags": [],
 	"description": "",
@@ -67,7 +81,14 @@
 	"title": "Resource Cleanup",
 	"tags": [],
 	"description": "",
-	"content": "Clean up resources We will proceed to delete the resources in the following order:\nTerrafrom destroy: Run command: docker-compose run \u0026ndash;rm terraform destroy Import Secret \u0026amp; Access Key Checking AWS Console: Local Check:\nRun command: docker system prune -a docker images "
+	"content": "Clean up resources All processing to clearn up all the resources\nContent EC2 Jenkins "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/4-cleanup/4.2-jenkins/",
+	"title": "Jenkins",
+	"tags": [],
+	"description": "",
+	"content": "We are processing \u0026hellip;.\n"
 },
 {
 	"uri": "http://localhost:1313/cicd-ws/categories/",

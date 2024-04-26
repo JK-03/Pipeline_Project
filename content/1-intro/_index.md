@@ -18,11 +18,11 @@ Terraform can manage low-level components like compute, storage, and networking 
 
 In this workshop we will use Terraform with AWS to create VPC, Subnet, EC2 , Route table, Internet gateway, Security group
 
-![1](/ws-0001/images/1/terraform.png?featherlight=false&width=90pc)
+![1](/cicd-ws/images/1/terraform.png?featherlight=false&width=90pc)
 
 #### Content
 
-1. [Introduction](/ws-0001/1-intro/)
-2. [Prepairation](/ws-0001/2-prepair/)
-3. [Terraform Configure](3-tfonfig/)
-4. [Resource Cleanup](4-cleanup/)
+1. [Introduction](/cicd-ws/1-intro/)
+2. [Prepairation](/cicd-ws/2-prepair/)
+3. [Configure](cicd-ws/3-config/)
+4. [Cleanup](/cdicd-ws/4-cleanup/)

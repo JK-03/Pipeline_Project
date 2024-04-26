@@ -3,7 +3,7 @@
   <head><script src="/cicd-ws/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=cicd-ws/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.123.8">
     <meta name="description" content="">
 <meta name="author" content="tuanatran.vn@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Introduction :: Start with Amazon EFS file system .</title>
 
     
-    <link href="/cicd-ws/css/nucleus.css?1713750595" rel="stylesheet">
-    <link href="/cicd-ws/css/fontawesome-all.min.css?1713750595" rel="stylesheet">
-    <link href="/cicd-ws/css/hybrid.css?1713750595" rel="stylesheet">
-    <link href="/cicd-ws/css/featherlight.min.css?1713750595" rel="stylesheet">
-    <link href="/cicd-ws/css/perfect-scrollbar.min.css?1713750595" rel="stylesheet">
-    <link href="/cicd-ws/css/auto-complete.css?1713750595" rel="stylesheet">
-    <link href="/cicd-ws/css/atom-one-dark-reasonable.css?1713750595" rel="stylesheet">
-    <link href="/cicd-ws/css/theme.css?1713750595" rel="stylesheet">
-    <link href="/cicd-ws/css/hugo-theme.css?1713750595" rel="stylesheet">
+    <link href="/cicd-ws/css/nucleus.css?1714153171" rel="stylesheet">
+    <link href="/cicd-ws/css/fontawesome-all.min.css?1714153171" rel="stylesheet">
+    <link href="/cicd-ws/css/hybrid.css?1714153171" rel="stylesheet">
+    <link href="/cicd-ws/css/featherlight.min.css?1714153171" rel="stylesheet">
+    <link href="/cicd-ws/css/perfect-scrollbar.min.css?1714153171" rel="stylesheet">
+    <link href="/cicd-ws/css/auto-complete.css?1714153171" rel="stylesheet">
+    <link href="/cicd-ws/css/atom-one-dark-reasonable.css?1714153171" rel="stylesheet">
+    <link href="/cicd-ws/css/theme.css?1714153171" rel="stylesheet">
+    <link href="/cicd-ws/css/hugo-theme.css?1714153171" rel="stylesheet">
     
-    <link href="/cicd-ws/css/theme-workshop.css?1713750595" rel="stylesheet">
+    <link href="/cicd-ws/css/theme-workshop.css?1714153171" rel="stylesheet">
     
     
 
-    <script src="/cicd-ws/js/jquery-3.3.1.min.js?1713750595"></script>
+    <script src="/cicd-ws/js/jquery-3.3.1.min.js?1714153171"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/cicd-ws/js/lunr.min.js?1713750595"></script>
-<script type="text/javascript" src="/cicd-ws/js/auto-complete.js?1713750595"></script>
+<script type="text/javascript" src="/cicd-ws/js/lunr.min.js?1714153171"></script>
+<script type="text/javascript" src="/cicd-ws/js/auto-complete.js?1714153171"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/cicd-ws\/";
     
 </script>
-<script type="text/javascript" src="/cicd-ws/js/search.js?1713750595"></script>
+<script type="text/javascript" src="/cicd-ws/js/search.js?1714153171"></script>
 
     
   </div>
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/cicd-ws/2-prepair/2.1-aws/" title="AWS" class="dd-item 
+    <li data-nav-id="/cicd-ws/2-prepair/2.1-docker/" title="Docker" class="dd-item 
         
         
         
         ">
-      <a href="/cicd-ws/2-prepair/2.1-aws/">
-           <b> 2.1 </b> AWS
+      <a href="/cicd-ws/2-prepair/2.1-docker/">
+           <b> 2.1 </b> Docker
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/cicd-ws/2-prepair/2.2-dockercompose/" title="Docker Compose" class="dd-item 
+    <li data-nav-id="/cicd-ws/2-prepair/2.2-aws/" title="AWS" class="dd-item 
         
         
         
         ">
-      <a href="/cicd-ws/2-prepair/2.2-dockercompose/">
-           <b> 2.2 </b> Docker Compose
+      <a href="/cicd-ws/2-prepair/2.2-aws/">
+           <b> 2.2 </b> AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,12 +223,12 @@
  
   
     
-    <li data-nav-id="/cicd-ws/2-prepair/2.4-github/" title="Github" class="dd-item 
+    <li data-nav-id="/cicd-ws/2-prepair/2.4-git/" title="Github" class="dd-item 
         
         
         
         ">
-      <a href="/cicd-ws/2-prepair/2.4-github/">
+      <a href="/cicd-ws/2-prepair/2.4-git/">
            <b> 2.4 </b> Github
           
             <i class="fas fa-check read-icon"></i>
@@ -258,13 +258,13 @@
  
   
     
-    <li data-nav-id="/cicd-ws/3-tfconfig/" title="Terraform Configure" class="dd-item 
+    <li data-nav-id="/cicd-ws/3-config/" title="Configuration" class="dd-item 
         
         
         
         ">
-      <a href="/cicd-ws/3-tfconfig/">
-           <b> 3. </b> Terraform Configure
+      <a href="/cicd-ws/3-config/">
+           <b> 3. </b> Configuration
           
             <i class="fas fa-check read-icon"></i>
           
@@ -289,13 +289,41 @@
  
   
     
-    <li data-nav-id="/cicd-ws/3-tfconfig/3.1-vpcsubnet/" title="VPC &amp; Subnet" class="dd-item 
+    <li data-nav-id="/cicd-ws/3-config/3.1-ec2/" title="EC2" class="dd-item 
         
         
         
         ">
-      <a href="/cicd-ws/3-tfconfig/3.1-vpcsubnet/">
-           <b> 3.1 </b> VPC &amp; Subnet
+      <a href="/cicd-ws/3-config/3.1-ec2/">
+           <b> 3.1 </b> EC2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cicd-ws/3-config/3.2-jenkins/" title="Jenkins" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/cicd-ws/3-config/3.2-jenkins/">
+           <b> 3.2 </b> Jenkins
           
             <i class="fas fa-check read-icon"></i>
           
@@ -336,6 +364,74 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cicd-ws/4-cleanup/4.1-ec2/" title="EC2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/cicd-ws/4-cleanup/4.1-ec2/">
+           <b> 4.1 </b> EC2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cicd-ws/4-cleanup/4.2-jenkins/" title="Jenkins" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/cicd-ws/4-cleanup/4.2-jenkins/">
+           <b> 4.2 </b> Jenkins
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -388,7 +484,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>22-03-2024</font></i>
+        <i><font color=orange>27-04-2024</font></i>
     </left>
     <left>
         <br>
@@ -483,13 +579,13 @@
 <p>You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle.</p>
 <p>Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.</p>
 <p>In this workshop we will use Terraform with AWS to create VPC, Subnet, EC2 , Route table, Internet gateway, Security group</p>
-<p><img alt="1" src="/ws-0001/images/1/terraform.png?featherlight=false&width=90pc"></p>
+<p><img alt="1" src="/cicd-ws/images/1/terraform.png?featherlight=false&width=90pc"></p>
 <h4 id="content">Content</h4>
 <ol>
-<li><a href="/ws-0001/1-intro/">Introduction</a></li>
-<li><a href="/ws-0001/2-prepair/">Prepairation</a></li>
-<li><a href="3-tfonfig/">Terraform Configure</a></li>
-<li><a href="/cicd-ws/4-cleanup/">Resource Cleanup</a></li>
+<li><a href="/cicd-ws/1-intro/">Introduction</a></li>
+<li><a href="/cicd-ws/2-prepair/">Prepairation</a></li>
+<li><a href="cicd-ws/3-config/">Configure</a></li>
+<li><a href="/cdicd-ws/4-cleanup/">Cleanup</a></li>
 </ol>
 
 
@@ -659,6 +755,53 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -674,6 +817,9 @@
                     
                     
 
+                    
+            
+        
                     
             
         
@@ -700,19 +846,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/cicd-ws/js/clipboard.min.js?1713750595"></script>
-    <script src="/cicd-ws/js/perfect-scrollbar.min.js?1713750595"></script>
-    <script src="/cicd-ws/js/perfect-scrollbar.jquery.min.js?1713750595"></script>
-    <script src="/cicd-ws/js/jquery.sticky.js?1713750595"></script>
-    <script src="/cicd-ws/js/featherlight.min.js?1713750595"></script>
-    <script src="/cicd-ws/js/highlight.pack.js?1713750595"></script>
+    <script src="/cicd-ws/js/clipboard.min.js?1714153171"></script>
+    <script src="/cicd-ws/js/perfect-scrollbar.min.js?1714153171"></script>
+    <script src="/cicd-ws/js/perfect-scrollbar.jquery.min.js?1714153171"></script>
+    <script src="/cicd-ws/js/jquery.sticky.js?1714153171"></script>
+    <script src="/cicd-ws/js/featherlight.min.js?1714153171"></script>
+    <script src="/cicd-ws/js/highlight.pack.js?1714153171"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/cicd-ws/js/modernizr.custom-3.6.0.js?1713750595"></script>
-    <script src="/cicd-ws/js/learn.js?1713750595"></script>
-    <script src="/cicd-ws/js/hugo-learn.js?1713750595"></script>
+    <script src="/cicd-ws/js/modernizr.custom-3.6.0.js?1714153171"></script>
+    <script src="/cicd-ws/js/learn.js?1714153171"></script>
+    <script src="/cicd-ws/js/hugo-learn.js?1714153171"></script>
 
-    <link href="/cicd-ws/mermaid/mermaid.css?1713750595" rel="stylesheet" />
-    <script src="/cicd-ws/mermaid/mermaid.js?1713750595"></script>
+    <link href="/cicd-ws/mermaid/mermaid.css?1714153171" rel="stylesheet" />
+    <script src="/cicd-ws/mermaid/mermaid.js?1714153171"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

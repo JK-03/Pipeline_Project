@@ -9,12 +9,12 @@ pre : " <b> 2. </b> "
 ## Diagram for Workshop
 In this lab, we will be constructing a model based on the following diagram:
 
-![2](/ws-0001/images/2/tf-ws-0001.png?featherlight=false&width=90pc)
+![2](/cicd-ws/images/2/tf-ws-0001.png?featherlight=false&width=90pc)
 
 
 ### Contents
 
-1. [AWS](2.1-aws/)
-2. [Docker Compose](2.2-dockercompose/)
-3. [Terraform](2.3-terraform/)
-4. [Git Hub](2.4-github/)
+1. [Docker](2.1-docker/)
+2. [AWS](2.2-aws/)
+3. [Teraform](2.3-terraform/)
+4. [Git](2.4-git/)
