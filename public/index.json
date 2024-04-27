@@ -1,10 +1,10 @@
 [
 {
 	"uri": "http://localhost:1313/cicd-ws/",
-	"title": " CI/CD Projects ",
+	"title": " DevOps Projects ",
 	"tags": [],
 	"description": "",
-	"content": "CI/CD Projects Overview Infomation \u0026hellip;.\nContent Introduction Prepairation Configuration Cleanup "
+	"content": "Projects DevOps is a methodology that combines software development and IT operations to create a streamlined and automated development process. To achieve this, there are several tools that DevOps teams use to automate processes, manage infrastructure, and monitor applications\nIn this workshop, we will focus in some of DevOps tools:\nDevOps tools categorized: Version Control Systems (VCS): GitHub, GitLab Continuous Integration (CI) Tools: Jenkins, GitLab Containerization and Orchestration: Docker, Kubernetes Infrastructure as Code (IaC): Terraform Monitoring and Logging Tools: Prometheus, Zabbix, Grafana, ELK Stack Content Introduction Prepairation Configuration Cleanup "
 },
 {
 	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.1-docker/",
@@ -25,7 +25,7 @@
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
-	"content": "Infrastructure As Code with Terraform and AWS Overview HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share.\nYou can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle.\nTerraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.\nIn this workshop we will use Terraform with AWS to create VPC, Subnet, EC2 , Route table, Internet gateway, Security group\nContent Introduction Prepairation Configure Cleanup "
+	"content": "DevOps Projects Overview Continuous Integration and Continuous Deployment (CI/CD) is a cornerstone of DevOps methodology, emphasizing automation and collaboration throughout the software development lifecycle.\nContinuous Integration (CI): Developers regularly push code changes to a shared repository. Automated tests are run against the newly integrated code to ensure it doesn\u0026rsquo;t break existing functionality. If tests fail, developers are notified immediately, and they can address issues before they become larger problems. Continuous Deployment (CD): Once code changes pass the CI phase, they\u0026rsquo;re automatically deployed to production or staging environments. This process reduces manual intervention and ensures that new features or bug fixes reach users as quickly as possible. Content Introduction Prepairation Configure Cleanup "
 },
 {
 	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.2-aws/",
@@ -46,14 +46,14 @@
 	"title": "Prepairation",
 	"tags": [],
 	"description": "",
-	"content": "Diagram for Workshop In this lab, we will be constructing a model based on the following diagram:\nContents Docker AWS Teraform Git "
+	"content": "Diagram Workshop - 0001 In this lab, we will be automate deploy a Server in AWS Cloud with tools: AWS CLI, Docker Compose, Terraform. Server Name: Web-Server Deploy processing: follow link Contents Docker AWS Teraform Git "
 },
 {
 	"uri": "http://localhost:1313/cicd-ws/3-config/",
 	"title": "Configuration",
 	"tags": [],
 	"description": "",
-	"content": " Using Terraform to automate IaC Content EC2 jenkins "
+	"content": " The Projects for the workshop \u0026hellip;.. Content EC2 jenkins "
 },
 {
 	"uri": "http://localhost:1313/cicd-ws/2-prepair/2.3-terraform/",

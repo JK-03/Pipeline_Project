@@ -6,8 +6,11 @@ chapter : false
 pre : " <b> 2. </b> "
 ---
 
-## Diagram for Workshop
-In this lab, we will be constructing a model based on the following diagram:
+## Diagram 
+### Workshop - 0001
+-   In this lab, we will be automate deploy a Server in **AWS Cloud** with tools: AWS CLI, Docker Compose, Terraform. 
+    -  Server Name: **Web-Server** 
+    -  Deploy processing: [follow link](3-config/3.1-ec2)
 
 ![2](/cicd-ws/images/2/tf-ws-0001.png?featherlight=false&width=90pc)
 

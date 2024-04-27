@@ -20,7 +20,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "Start with Amazon EFS file system ."
+title = ""
 weight = 1
 languageName = "English"
 

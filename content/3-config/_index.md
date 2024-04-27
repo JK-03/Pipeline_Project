@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 3. </b> "
 ---
 
--   Using Terraform to automate IaC
+-   The Projects for the workshop .....
 
 ## Content
 

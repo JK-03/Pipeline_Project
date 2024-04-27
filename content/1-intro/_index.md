@@ -6,19 +6,20 @@ chapter : false
 pre : " <b> 1. </b> "
 ---
 
-# Infrastructure As Code with Terraform and AWS
+# DevOps Projects 
 
 #### Overview
+Continuous Integration and Continuous Deployment (CI/CD) is a cornerstone of DevOps methodology, emphasizing automation and collaboration throughout the software development lifecycle.
 
-HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share.
+![0](/cicd-ws/images/1/devops.png?featherlight=false&width=50pc)
 
-You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. 
-
-Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.
-
-In this workshop we will use Terraform with AWS to create VPC, Subnet, EC2 , Route table, Internet gateway, Security group
-
-![1](/cicd-ws/images/1/terraform.png?featherlight=false&width=90pc)
+- Continuous Integration (CI):
+  - Developers regularly push code changes to a shared repository.
+  - Automated tests are run against the newly integrated code to ensure it doesn't break existing functionality.
+  - If tests fail, developers are notified immediately, and they can address issues before they become larger problems. 
+- Continuous Deployment (CD):
+  - Once code changes pass the CI phase, they're automatically deployed to production or staging environments.
+  - This process reduces manual intervention and ensures that new features or bug fixes reach users as quickly as possible.
 
 #### Content
 
