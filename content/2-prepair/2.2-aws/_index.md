@@ -6,29 +6,33 @@ chapter : false
 pre : " <b> 2.2 </b> "
 ---
 
-### AWS Configuration
-#### Run AWS CLI in container:
-Run docker compose: 
+Amazon Web Services (AWS) is a comprehensive and widely used cloud computing platform provided by Amazon. It offers a vast array of services, allowing individuals and businesses to build and deploy scalable applications and services without the need to invest in physical infrastructure
+
+#### Overview
+
+##### AWS CLI :
+-   The AWS Command Line Interface (CLI) is a powerful tool provided by Amazon Web Services (AWS) that allows you to interact with AWS services directly from your command line or terminal
+-   It provides a convenient and scriptable way to manage your AWS resources without needing to use the AWS Management Console
+
+#### Configuration
+Prepair and run docker compose file
 ```dockercompose
  docker-compose run --rm aws --version 
 ```
 ![22](/cicd-ws/images/2-prepair/2.2-aws/1.png)
 
-#### Create AWS Keypair to access AWS Instances
-
-Create user: **tf-cli-keypair.pem**
+##### AWS: 
+Create keypair to access AWS Instances: **tf-cli-keypair.pem**
 ```dockercompose 
 docker-compose run --rm aws ec2 create-key-pair --key-name tf-cli-keypair --query 'KeyMaterial' --output text > tf-cli-keypair.pem
 ```
 ![22](/cicd-ws/images/2-prepair/2.2-aws/5.png)
 
-#### Create AWS Account for Terraform use AWS CLI
-
-Create user: **tf-cli**
+Create AWS Account for Terraform use AWS CLI: **tf-cli**
 ```dockercompose 
  docker-compose run --rm aws iam create-user --user-name tf-cli
 ```
-AWS Checking Keypair:
+AWS Checking keypair:
 ![22](/cicd-ws/images/2-prepair/2.2-aws/2.png)
 
 Create Access Key & export to local
@@ -37,7 +41,7 @@ Create Access Key & export to local
 ```
 ![22](/cicd-ws/images/2-prepair/2.2-aws/3.png)
 
-Create policy and allow access EC2 and Limit Region 
+Create policy and configure to allow access EC2 and Limit Region 
   - Create a custom policy file: **ec2-limited-access-policy.json**
             
 ```policy 

@@ -1,13 +1,13 @@
 ---
-title : "EC2"
+title : "IaC"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
 pre : " <b> 3.1 </b> "
 ---
 
-In this Workshop we will create an EC2 instances with the information bellow:
-#### AWS EC2 Configuration:
+In this Workshop we will create an EC2 instances with the information bellow
+#### Overview AWS EC2
 -   Instances name: Web-Server
 -   VPC: 10.0.0.0/16
 -   Subnets: 10.0.1.0/24
@@ -146,7 +146,7 @@ resource "aws_instance" "myapp-server" {
 }
 
 ```
-Terraform provider aws:  **terraform.tfvars**
+Terraform provider **AWS** :  **terraform.tfvars**
 
 ```tfvars
 # Network and Instance variables
@@ -172,7 +172,7 @@ Terraform apply:
 ![23](/cicd-ws/images/3-config/3.1-ec2/2.png)
 
 -   AWS Instance checking:
-![23](/cicd-ws/images/3-config/3.1-ec2/4.png)
+![23](/cicd-ws/images/3-config/3.1-ec2/4.png?featherlight=false&width=90pc)
 
 Add Keypair permission:
 ```dockercompose
@@ -184,4 +184,4 @@ SSH to EC2 Instances:
  ssh -i tf-cli-keypair.pem ec2-user@13.250.64.49
 ```
 -   AWS Instance checking:
-![23](/cicd-ws/images/3-config/3.1-ec2/3.png)
+![23](/cicd-ws/images/3-config/3.1-ec2/3.png?featherlight=false&width=90pc)

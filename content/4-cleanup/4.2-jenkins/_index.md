@@ -1,5 +1,5 @@
 ---
-title : "Jenkins"
+title : "CICD"
 date : "`r Sys.Date()`"
 weight : 5
 chapter : false

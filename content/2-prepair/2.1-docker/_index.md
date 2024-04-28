@@ -1,14 +1,25 @@
 ---
-title : "Docker"
+title : "Container"
 date :  "`r Sys.Date()`" 
 weight : 1
 chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
+A **container** is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries, and settings
 
-#### Docker & Docker Compose status:
-Run commands:
+#### Overview
+
+##### Docker
+- Docker is a platform that enables developers to build, package, ship, and run applications in containers.
+- It provides tools and a platform to manage containerized applications across different environments, from development to production. 
+
+##### Docker Compose
+- Docker Compose is a tool provided by Docker that allows you to define and manage multi-container Docker applications.
+-  It uses a YAML file to configure the services, networks, and volumes required for your application
+
+##### Configuration
+Check the installed software
 ```docker
  docker --version 
 ```
@@ -17,7 +28,7 @@ Run commands:
 ```
 ![22](/cicd-ws/images/2-prepair/2.1-docker/4.png)
 
-#### Create Docker Compose file
+Create a docker compose file to run the software on the container environment
 -  **docker-compose.yml**
 ```Docker-compose
 version: '3'

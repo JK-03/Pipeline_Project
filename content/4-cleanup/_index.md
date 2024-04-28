@@ -11,7 +11,7 @@ All processing to clearn up all the resources
 
 ## Content
 
-1. [EC2](4.1-ec2/)
-2. [Jenkins](4.2-jenkins/)
+1. [IAC](4.1-ec2/)
+2. [CICD](4.2-jenkins/)
 
 

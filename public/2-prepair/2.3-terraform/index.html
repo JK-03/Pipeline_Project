@@ -12,21 +12,21 @@
     <title>Terraform :: </title>
 
     
-    <link href="/cicd-ws/css/nucleus.css?1714195354" rel="stylesheet">
-    <link href="/cicd-ws/css/fontawesome-all.min.css?1714195354" rel="stylesheet">
-    <link href="/cicd-ws/css/hybrid.css?1714195354" rel="stylesheet">
-    <link href="/cicd-ws/css/featherlight.min.css?1714195354" rel="stylesheet">
-    <link href="/cicd-ws/css/perfect-scrollbar.min.css?1714195354" rel="stylesheet">
-    <link href="/cicd-ws/css/auto-complete.css?1714195354" rel="stylesheet">
-    <link href="/cicd-ws/css/atom-one-dark-reasonable.css?1714195354" rel="stylesheet">
-    <link href="/cicd-ws/css/theme.css?1714195354" rel="stylesheet">
-    <link href="/cicd-ws/css/hugo-theme.css?1714195354" rel="stylesheet">
+    <link href="/cicd-ws/css/nucleus.css?1714271363" rel="stylesheet">
+    <link href="/cicd-ws/css/fontawesome-all.min.css?1714271363" rel="stylesheet">
+    <link href="/cicd-ws/css/hybrid.css?1714271363" rel="stylesheet">
+    <link href="/cicd-ws/css/featherlight.min.css?1714271363" rel="stylesheet">
+    <link href="/cicd-ws/css/perfect-scrollbar.min.css?1714271363" rel="stylesheet">
+    <link href="/cicd-ws/css/auto-complete.css?1714271363" rel="stylesheet">
+    <link href="/cicd-ws/css/atom-one-dark-reasonable.css?1714271363" rel="stylesheet">
+    <link href="/cicd-ws/css/theme.css?1714271363" rel="stylesheet">
+    <link href="/cicd-ws/css/hugo-theme.css?1714271363" rel="stylesheet">
     
-    <link href="/cicd-ws/css/theme-workshop.css?1714195354" rel="stylesheet">
+    <link href="/cicd-ws/css/theme-workshop.css?1714271363" rel="stylesheet">
     
     
 
-    <script src="/cicd-ws/js/jquery-3.3.1.min.js?1714195354"></script>
+    <script src="/cicd-ws/js/jquery-3.3.1.min.js?1714271363"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/cicd-ws/js/lunr.min.js?1714195354"></script>
-<script type="text/javascript" src="/cicd-ws/js/auto-complete.js?1714195354"></script>
+<script type="text/javascript" src="/cicd-ws/js/lunr.min.js?1714271363"></script>
+<script type="text/javascript" src="/cicd-ws/js/auto-complete.js?1714271363"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/cicd-ws\/";
     
 </script>
-<script type="text/javascript" src="/cicd-ws/js/search.js?1714195354"></script>
+<script type="text/javascript" src="/cicd-ws/js/search.js?1714271363"></script>
 
     
   </div>
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/cicd-ws/2-prepair/2.1-docker/" title="Docker" class="dd-item 
+    <li data-nav-id="/cicd-ws/2-prepair/2.1-docker/" title="Container" class="dd-item 
         
         
         
         ">
       <a href="/cicd-ws/2-prepair/2.1-docker/">
-           <b> 2.1 </b> Docker
+           <b> 2.1 </b> Container
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,13 +223,13 @@
  
   
     
-    <li data-nav-id="/cicd-ws/2-prepair/2.4-git/" title="Github" class="dd-item 
+    <li data-nav-id="/cicd-ws/2-prepair/2.4-git/" title="Git" class="dd-item 
         
         
         
         ">
       <a href="/cicd-ws/2-prepair/2.4-git/">
-           <b> 2.4 </b> Github
+           <b> 2.4 </b> Git
           
             <i class="fas fa-check read-icon"></i>
           
@@ -289,13 +289,13 @@
  
   
     
-    <li data-nav-id="/cicd-ws/3-config/3.1-ec2/" title="EC2" class="dd-item 
+    <li data-nav-id="/cicd-ws/3-config/3.1-ec2/" title="IaC" class="dd-item 
         
         
         
         ">
       <a href="/cicd-ws/3-config/3.1-ec2/">
-           <b> 3.1 </b> EC2
+           <b> 3.1 </b> IaC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -317,13 +317,13 @@
  
   
     
-    <li data-nav-id="/cicd-ws/3-config/3.2-jenkins/" title="Jenkins" class="dd-item 
+    <li data-nav-id="/cicd-ws/3-config/3.2-jenkins/" title="CICD" class="dd-item 
         
         
         
         ">
       <a href="/cicd-ws/3-config/3.2-jenkins/">
-           <b> 3.2 </b> Jenkins
+           <b> 3.2 </b> CICD
           
             <i class="fas fa-check read-icon"></i>
           
@@ -383,13 +383,13 @@
  
   
     
-    <li data-nav-id="/cicd-ws/4-cleanup/4.1-ec2/" title="EC2" class="dd-item 
+    <li data-nav-id="/cicd-ws/4-cleanup/4.1-ec2/" title="IaC" class="dd-item 
         
         
         
         ">
       <a href="/cicd-ws/4-cleanup/4.1-ec2/">
-           <b> 4.1 </b> EC2
+           <b> 4.1 </b> IaC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -579,12 +579,37 @@
 
 
 
-	<h4 id="run-terraform-in-containter">Run Terraform in containter:</h4>
+	<p>Terraform is a open-source tool used to build, modify, and version control infratrucrure</p>
+<h4 id="overview">Overview</h4>
+<ul>
+<li><strong>Provider</strong>(<code>provider.tf</code>):
+Enables Terrafrom to interact with cloud providers and other APIs</li>
+<li><strong>Terraform</strong> (<code>versions.tf</code>):
+Sets version constaints for Terraform and optionally maps provides to a source address and version constaint</li>
+<li><strong>Variables</strong> (<code>variable.tf</code>):
+Input variables define reusable values and work like function arguments in general-purpose programming languages</li>
+<li><strong>Resource</strong> (<code>main.tf</code>):
+Resource blocks describe infrastructure objects like VPCs, subnets, route tables, and gateways</li>
+<li><strong>Data</strong> :
+Data sources allow Terraform to ultilize information form resources that were defined outside of Terraform (or defined a different Terraform configuration)</li>
+<li><strong>Output</strong>:
+Outputs return structured data form your configuration and work like return values in generaral-purpose programming languages</li>
+<li><strong>Terraform.tfvars</strong>:
+To set lots of variables, it is more convenient to specify their values in a variable definitions file</li>
+</ul>
+<h4 id="command">Command</h4>
+<ul>
+<li><strong>terraform init [options]</strong>: command initializes a working directory containing Terraform configuration files.</li>
+<li><strong>terraform plan [options]</strong>: command creates an execution plan, which lets you preview the changes that Terraform plans to make to your infrastructure.</li>
+<li><strong>terraform apply [options] [plan file]</strong>: command executes the actions proposed in a Terraform plan</li>
+<li><strong>terraform destroy [options]</strong>: command is a convenient way to destroy all remote objects managed by a particular Terraform configuration.</li>
+</ul>
+<h4 id="run-terraform-in-containter">Run Terraform in containter:</h4>
 <p>Run docker compose:</p>
 <pre tabindex="0"><code class="language-dockercompose" data-lang="dockercompose"> docker-compose run --rm terraform version
-</code></pre><p><img alt="23" src="/cicd-ws/images/2-prepair/2.3-terraform/1.png"></p>
-<h4 id="terraform-configuration">Terraform configuration</h4>
-<p>Terraform provider aws:  <strong>versions.tf</strong></p>
+</code></pre><p><img alt="23" src="/cicd-ws/images/2-prepair/2.3-terraform/1.png">
+Run configure:</p>
+<p>Provider (<strong>AWS</strong>):   <strong>versions.tf</strong></p>
 <pre tabindex="0"><code class="language-dockercompose" data-lang="dockercompose"> terraform {
   required_providers {
     aws = {
@@ -869,7 +894,7 @@ variable &#34;region&#34; {
 			<a class="nav nav-prev" href="/cicd-ws/2-prepair/2.2-aws/" title="AWS"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cicd-ws/2-prepair/2.4-git/" title="Github" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cicd-ws/2-prepair/2.4-git/" title="Git" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -879,19 +904,19 @@ variable &#34;region&#34; {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/cicd-ws/js/clipboard.min.js?1714195354"></script>
-    <script src="/cicd-ws/js/perfect-scrollbar.min.js?1714195354"></script>
-    <script src="/cicd-ws/js/perfect-scrollbar.jquery.min.js?1714195354"></script>
-    <script src="/cicd-ws/js/jquery.sticky.js?1714195354"></script>
-    <script src="/cicd-ws/js/featherlight.min.js?1714195354"></script>
-    <script src="/cicd-ws/js/highlight.pack.js?1714195354"></script>
+    <script src="/cicd-ws/js/clipboard.min.js?1714271363"></script>
+    <script src="/cicd-ws/js/perfect-scrollbar.min.js?1714271363"></script>
+    <script src="/cicd-ws/js/perfect-scrollbar.jquery.min.js?1714271363"></script>
+    <script src="/cicd-ws/js/jquery.sticky.js?1714271363"></script>
+    <script src="/cicd-ws/js/featherlight.min.js?1714271363"></script>
+    <script src="/cicd-ws/js/highlight.pack.js?1714271363"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/cicd-ws/js/modernizr.custom-3.6.0.js?1714195354"></script>
-    <script src="/cicd-ws/js/learn.js?1714195354"></script>
-    <script src="/cicd-ws/js/hugo-learn.js?1714195354"></script>
+    <script src="/cicd-ws/js/modernizr.custom-3.6.0.js?1714271363"></script>
+    <script src="/cicd-ws/js/learn.js?1714271363"></script>
+    <script src="/cicd-ws/js/hugo-learn.js?1714271363"></script>
 
-    <link href="/cicd-ws/mermaid/mermaid.css?1714195354" rel="stylesheet" />
-    <script src="/cicd-ws/mermaid/mermaid.js?1714195354"></script>
+    <link href="/cicd-ws/mermaid/mermaid.css?1714271363" rel="stylesheet" />
+    <script src="/cicd-ws/mermaid/mermaid.js?1714271363"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

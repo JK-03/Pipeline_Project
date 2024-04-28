@@ -1,12 +1,21 @@
 ---
-title : "Github"
+title : "Git"
 date :  "`r Sys.Date()`" 
 weight : 4
 chapter : false
 pre : " <b> 2.4 </b> "
 ---
 
-## Version control with Github
+Git is a distributed version control system (DVCS) that helps developers track changes to source code during software development. It allows multiple developers to collaborate on projects simultaneously.
+
+#### Overview
+##### Github
+- GitHub is a web-based platform built on top of Git, the distributed version control system. It offers a variety of features to help developers collaborate on software projects
+- GitHub provides a platform for hosting Git repositories. Developers can create new repositories to store their code, either publicly (visible to everyone) or privately (accessible only to authorized collaborators)
+
+#### Configuration
+**Create Github Repository and Access**
+- Create a public repo: https://github.com/nonotnonez/ws-0001
 - Create Github Access Key : https://github.com/settings/tokens
   - Name: **github_token_ws**
   - Expiration:	90 days

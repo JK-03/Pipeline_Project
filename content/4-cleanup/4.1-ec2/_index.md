@@ -1,5 +1,5 @@
 ---
-title : "EC2"
+title : "IaC"
 date : "`r Sys.Date()`"
 weight : 4
 chapter : false
