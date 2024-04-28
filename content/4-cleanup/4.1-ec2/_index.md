@@ -18,4 +18,4 @@ Run docker compose:
 ![41](/cicd-ws/images/4-cleanup/4.1-ec2/1.png)
 
 #### AWS Checking
-![41](/cicd-ws/images/4-cleanup/4.1-ec2/1.png)
+![41](/cicd-ws/images/4-cleanup/4.1-ec2/2.png)
