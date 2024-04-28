@@ -12,3 +12,4 @@ Devops projects are processing ....
 
 1. [Jenkins](3.3.1-jenkins/)
 2. [GitLab](3.3.2-gitlab/)
+2. [Monitoring](3.3.3-monitoring/)

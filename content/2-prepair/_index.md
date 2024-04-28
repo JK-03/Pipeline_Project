@@ -6,14 +6,16 @@ chapter : false
 pre : " <b> 2. </b> "
 ---
 
-## Diagram 
-### Workshop - 0001
+### Diagram 
+#### Workshop-0001
 -   In this lab, we will be automate deploy a Server in **AWS Cloud** with tools: AWS CLI, Docker Compose, Terraform. 
-    -  Server Name: **Web-Server** 
-    -  Deploy processing: [follow link](3-config/3.1-ec2)
+    -   [Following this link](3-config/3.1-ec2)
 
 ![2](/cicd-ws/images/2/tf-ws-0001.png?featherlight=false&width=90pc)
 
+#### Workshop-0002 
+-   CICD is processing ...
+    -  [Following this link](3-config/3.2-cicd)
 
 ### Contents
 

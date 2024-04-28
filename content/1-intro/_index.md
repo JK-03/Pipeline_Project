@@ -25,5 +25,5 @@ Continuous Integration and Continuous Deployment (CI/CD) is a cornerstone of Dev
 
 1. [Introduction](/cicd-ws/1-intro/)
 2. [Prepairation](/cicd-ws/2-prepair/)
-3. [Configure](cicd-ws/3-config/)
-4. [Cleanup](/cdicd-ws/4-cleanup/)
+3. [Configure](/cicd-ws/3-config/)
+4. [Cleanup](/cicd-ws/4-cleanup/)
