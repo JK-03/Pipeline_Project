@@ -4,11 +4,15 @@
   <url>
     <loc>http://localhost:1313/cicd-ws/</loc>
   </url><url>
+    <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.1-jenkins/3.3.1.1-cicd/</loc>
+  </url><url>
     <loc>http://localhost:1313/cicd-ws/2-prepair/2.1-docker/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/3-config/3.1-ec2/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/1-intro/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.1-jenkins/3.3.1.2-advanced/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/2-prepair/2.2-aws/</loc>
   </url><url>
@@ -18,15 +22,23 @@
   </url><url>
     <loc>http://localhost:1313/cicd-ws/3-config/</loc>
   </url><url>
+    <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.1-jenkins/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/</loc>
+  </url><url>
     <loc>http://localhost:1313/cicd-ws/2-prepair/2.3-terraform/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/2-prepair/2.4-git/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.2-gitlab/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/4-cleanup/4.1-ec2/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/4-cleanup/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/4-cleanup/4.2-jenkins/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/2-prepair/2.5-local/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/categories/</loc>
   </url><url>

@@ -21,3 +21,4 @@ pre : " <b> 2. </b> "
 2. [AWS](2.2-aws/)
 3. [Teraform](2.3-terraform/)
 4. [Git](2.4-git/)
+5. [Local](2.5-local/)

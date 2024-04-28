@@ -12,3 +12,4 @@ pre : " <b> 3. </b> "
 
 1. [IaC](3.1-ec2/)
 2. [CICD](3.2-jenkins/)
+3. [Labs](3.3-labs/)

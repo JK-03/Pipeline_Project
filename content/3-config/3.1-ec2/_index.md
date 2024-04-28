@@ -163,7 +163,7 @@ Terraform plan:
 ```dockercompose
  docker-compose run –rm terraform plan
 ```
-![23](/cicd-ws/images/3-config/3.1-ec2/1.png)
+![31](/cicd-ws/images/3-config/3.1-ec2/1.png)
 
 Terraform apply: 
 ```dockercompose
