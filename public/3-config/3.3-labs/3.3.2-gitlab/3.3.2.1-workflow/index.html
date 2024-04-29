@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/cicd-ws/images/favicon.png" type="image/png">
 
-    <title>Prepairation :: </title>
+    <title>Workflow :: </title>
 
     
-    <link href="/cicd-ws/css/nucleus.css?1714378588" rel="stylesheet">
-    <link href="/cicd-ws/css/fontawesome-all.min.css?1714378588" rel="stylesheet">
-    <link href="/cicd-ws/css/hybrid.css?1714378588" rel="stylesheet">
-    <link href="/cicd-ws/css/featherlight.min.css?1714378588" rel="stylesheet">
-    <link href="/cicd-ws/css/perfect-scrollbar.min.css?1714378588" rel="stylesheet">
-    <link href="/cicd-ws/css/auto-complete.css?1714378588" rel="stylesheet">
-    <link href="/cicd-ws/css/atom-one-dark-reasonable.css?1714378588" rel="stylesheet">
-    <link href="/cicd-ws/css/theme.css?1714378588" rel="stylesheet">
-    <link href="/cicd-ws/css/hugo-theme.css?1714378588" rel="stylesheet">
+    <link href="/cicd-ws/css/nucleus.css?1714379965" rel="stylesheet">
+    <link href="/cicd-ws/css/fontawesome-all.min.css?1714379965" rel="stylesheet">
+    <link href="/cicd-ws/css/hybrid.css?1714379965" rel="stylesheet">
+    <link href="/cicd-ws/css/featherlight.min.css?1714379965" rel="stylesheet">
+    <link href="/cicd-ws/css/perfect-scrollbar.min.css?1714379965" rel="stylesheet">
+    <link href="/cicd-ws/css/auto-complete.css?1714379965" rel="stylesheet">
+    <link href="/cicd-ws/css/atom-one-dark-reasonable.css?1714379965" rel="stylesheet">
+    <link href="/cicd-ws/css/theme.css?1714379965" rel="stylesheet">
+    <link href="/cicd-ws/css/hugo-theme.css?1714379965" rel="stylesheet">
     
-    <link href="/cicd-ws/css/theme-workshop.css?1714378588" rel="stylesheet">
+    <link href="/cicd-ws/css/theme-workshop.css?1714379965" rel="stylesheet">
     
     
 
-    <script src="/cicd-ws/js/jquery-3.3.1.min.js?1714378588"></script>
+    <script src="/cicd-ws/js/jquery-3.3.1.min.js?1714379965"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cicd-ws/2-prepair/">
+  <body class="" data-url="/cicd-ws/3-config/3.3-labs/3.3.2-gitlab/3.3.2.1-workflow/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/cicd-ws/js/lunr.min.js?1714378588"></script>
-<script type="text/javascript" src="/cicd-ws/js/auto-complete.js?1714378588"></script>
+<script type="text/javascript" src="/cicd-ws/js/lunr.min.js?1714379965"></script>
+<script type="text/javascript" src="/cicd-ws/js/auto-complete.js?1714379965"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/cicd-ws\/";
     
 </script>
-<script type="text/javascript" src="/cicd-ws/js/search.js?1714378588"></script>
+<script type="text/javascript" src="/cicd-ws/js/search.js?1714379965"></script>
 
     
   </div>
@@ -110,7 +110,7 @@
     
     <li data-nav-id="/cicd-ws/2-prepair/" title="Prepairation" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/cicd-ws/2-prepair/">
@@ -287,7 +287,7 @@
   
     
     <li data-nav-id="/cicd-ws/3-config/" title="Configuration" class="dd-item 
-        
+        parent
         
         
         ">
@@ -374,7 +374,7 @@
   
     
     <li data-nav-id="/cicd-ws/3-config/3.3-labs/" title="Labs" class="dd-item 
-        
+        parent
         
         
         ">
@@ -501,7 +501,7 @@
   
     
     <li data-nav-id="/cicd-ws/3-config/3.3-labs/3.3.2-gitlab/" title="Gitlabs" class="dd-item 
-        
+        parent
         
         
         ">
@@ -533,7 +533,7 @@
     
     <li data-nav-id="/cicd-ws/3-config/3.3-labs/3.3.2-gitlab/3.3.2.1-workflow/" title="Workflow" class="dd-item 
         
-        
+        active
         
         ">
       <a href="/cicd-ws/3-config/3.3-labs/3.3.2-gitlab/3.3.2.1-workflow/">
@@ -1038,7 +1038,25 @@
             
           
           
-            <a href='/cicd-ws/'> DevOps Projects </a> > Prepairation
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/cicd-ws/'> DevOps Projects </a> > <a href='/cicd-ws/3-config/'>Configuration</a> > <a href='/cicd-ws/3-config/3.3-labs/'>Labs</a> > <a href='/cicd-ws/3-config/3.3-labs/3.3.2-gitlab/'>Gitlabs</a> > Workflow
+          
+        
+          
+        
+          
+        
           
         
           
@@ -1053,8 +1071,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#diagram">Diagram</a></li>
-        <li><a href="#contents">Contents</a></li>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -1074,7 +1091,7 @@
           
             <h1>
               
-              Prepairation
+              Workflow
             </h1>
           
 
@@ -1082,32 +1099,80 @@
 
 
 
-	<h3 id="diagram">Diagram</h3>
-<h4 id="workshop-0001">Workshop-0001</h4>
+	<h4 id="gitlab-server">Gitlab-Server</h4>
 <ul>
-<li>In this lab, we will be automate deploy a Server in <strong>AWS Cloud</strong> with tools: AWS CLI, Docker Compose, Terraform.
+<li>
+<p>Repo: <strong>shoeshop</strong></p>
+</li>
+<li>
+<p>New branch:</p>
 <ul>
-<li><a href="/cicd-ws/3-config/3.1-ec2/">Following this link</a></li>
+<li>Branch name: develop -&gt; Create from: main</li>
+<li>Branch name: feature/frontend/login -&gt; Create from: develop</li>
+<li>Branch name: feature/backend/login -&gt; Create from: develop</li>
+</ul>
+</li>
+<li>
+<p>Set permission approve : <a href="http://gitlab.local.test/shoeshop/shoeshop/-/settings/repository">http://gitlab.local.test/shoeshop/shoeshop/-/settings/repository</a></p>
+<ul>
+<li>
+<p>Protected branches :</p>
+<ul>
+<li>Branch: 	Allowed to merge
+<ul>
+<li>develop	-  Maintainers  -   Maintainers</li>
+<li>main	    -  Maintainers	-   <strong>No one</strong></li>
 </ul>
 </li>
 </ul>
-<p><img alt="2" src="/cicd-ws/images/2/tf-ws-0001.png?featherlight=false&width=90pc"></p>
-<h4 id="workshop-0002">Workshop-0002</h4>
+</li>
+<li>
+<p>Default branch : develop (for Developer Teams)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>New branch:</p>
 <ul>
-<li>CICD is processing &hellip;
+<li>Branch name: staging -&gt; Create from: develop</li>
+<li>Protected branches :
 <ul>
-<li><a href="/cicd-ws/3-config/3.2-cicd/">Following this link</a></li>
+<li>Branch: 	Allowed to merge
+<ul>
+<li>staging	-  Maintainers  -   Maintainers</li>
 </ul>
 </li>
 </ul>
-<h3 id="contents">Contents</h3>
-<ol>
-<li><a href="/cicd-ws/2-prepair/2.1-docker/">Docker</a></li>
-<li><a href="/cicd-ws/2-prepair/2.2-aws/">AWS</a></li>
-<li><a href="/cicd-ws/2-prepair/2.3-terraform/">Teraform</a></li>
-<li><a href="/cicd-ws/2-prepair/2.4-git/">Git</a></li>
-<li><a href="/cicd-ws/2-prepair/2.5-local/">Local</a></li>
-</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="permission-testing">Permission testing</h4>
+<ul>
+<li>Edit repo: <a href="http://gitlab.local.test/shoeshop/shoeshop/-/new/develop/">http://gitlab.local.test/shoeshop/shoeshop/-/new/develop/</a>
+<ul>
+<li>User: tuanta</li>
+<li>New file: config.txt</li>
+<li>Commit: config(database): modify connection</li>
+<li>Target branch: develop
+<ul>
+<li>-&gt; OK</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Edit repo: <a href="http://gitlab.local.test/shoeshop/shoeshop/-/new/main/">http://gitlab.local.test/shoeshop/shoeshop/-/new/main/</a>
+<ul>
+<li>User: tuanta</li>
+<li>New file: config.txt</li>
+<li>Commit: config(database): modify connection
+<ul>
+<li>ISSUE: -&gt; You are not allowed to push into this branch</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -1167,108 +1232,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -1321,6 +1284,58 @@
 
                     
                     
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
                         
                     
                     
@@ -1330,6 +1345,60 @@
             
             
                 
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1381,6 +1450,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1395,6 +1465,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1411,6 +1482,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1623,10 +1697,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cicd-ws/1-intro/" title="Introduction"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cicd-ws/3-config/3.3-labs/3.3.2-gitlab/" title="Gitlabs"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cicd-ws/2-prepair/2.1-docker/" title="Container" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cicd-ws/3-config/3.3-labs/3.3.2-gitlab/3.3.2.2-runner/" title="Runner" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1636,19 +1710,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/cicd-ws/js/clipboard.min.js?1714378588"></script>
-    <script src="/cicd-ws/js/perfect-scrollbar.min.js?1714378588"></script>
-    <script src="/cicd-ws/js/perfect-scrollbar.jquery.min.js?1714378588"></script>
-    <script src="/cicd-ws/js/jquery.sticky.js?1714378588"></script>
-    <script src="/cicd-ws/js/featherlight.min.js?1714378588"></script>
-    <script src="/cicd-ws/js/highlight.pack.js?1714378588"></script>
+    <script src="/cicd-ws/js/clipboard.min.js?1714379965"></script>
+    <script src="/cicd-ws/js/perfect-scrollbar.min.js?1714379965"></script>
+    <script src="/cicd-ws/js/perfect-scrollbar.jquery.min.js?1714379965"></script>
+    <script src="/cicd-ws/js/jquery.sticky.js?1714379965"></script>
+    <script src="/cicd-ws/js/featherlight.min.js?1714379965"></script>
+    <script src="/cicd-ws/js/highlight.pack.js?1714379965"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/cicd-ws/js/modernizr.custom-3.6.0.js?1714378588"></script>
-    <script src="/cicd-ws/js/learn.js?1714378588"></script>
-    <script src="/cicd-ws/js/hugo-learn.js?1714378588"></script>
+    <script src="/cicd-ws/js/modernizr.custom-3.6.0.js?1714379965"></script>
+    <script src="/cicd-ws/js/learn.js?1714379965"></script>
+    <script src="/cicd-ws/js/hugo-learn.js?1714379965"></script>
 
-    <link href="/cicd-ws/mermaid/mermaid.css?1714378588" rel="stylesheet" />
-    <script src="/cicd-ws/mermaid/mermaid.js?1714378588"></script>
+    <link href="/cicd-ws/mermaid/mermaid.css?1714379965" rel="stylesheet" />
+    <script src="/cicd-ws/mermaid/mermaid.js?1714379965"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

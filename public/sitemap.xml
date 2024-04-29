@@ -14,6 +14,8 @@
   </url><url>
     <loc>http://localhost:1313/cicd-ws/1-intro/</loc>
   </url><url>
+    <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.2-gitlab/3.3.2.1-workflow/</loc>
+  </url><url>
     <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.1-jenkins/3.3.1.2-advanced/</loc>
@@ -25,6 +27,10 @@
     <loc>http://localhost:1313/cicd-ws/2-prepair/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.3-monitor/3.3.3.2-prometheus/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.2-gitlab/3.3.2.2-runner/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.2-gitlab/3.3.2.3-cicd/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/3-config/</loc>
   </url><url>
