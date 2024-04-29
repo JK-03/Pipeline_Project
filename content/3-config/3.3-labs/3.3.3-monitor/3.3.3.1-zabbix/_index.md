@@ -57,7 +57,7 @@ systemctl restart zabbix-server zabbix-agent apache2
 systemctl enable zabbix-server zabbix-agent apache2
 ````
 
-2. Zabbix Agent Configuration: run on the monitored devices and send data to the server
+Zabbix Agent Configuration: run on the monitored devices and send data to the server
 - Installation
 ````sh
 wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu20.04_all.deb
@@ -77,7 +77,7 @@ Hostname=<zabbix server ip>
 systemctl restart zabbix-agent
 ````
 
-3. Add Host to Zabbix Server
+Add Host to Zabbix Server
 - Login
 - Add Host
     - Host - Create host
@@ -88,7 +88,7 @@ systemctl restart zabbix-agent
     Interfaces: Agent - IP: <Agent IP>
     -> Add
     ````
-4. Create Item & Trigger
+Create Item & Trigger
 - Item:
 ````sh
 Name:	App service on server <Host Agent IP>. running on port 8080 is unavaiilable		
@@ -109,8 +109,16 @@ Expresstion:	Item: App service on server <Host Agent IP>. running on port 8080 i
 	-> Add
 ````
 
-2. Dashboard Overview:
+Dashboard Overview:
 
 ![3331](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/4.png?featherlight=false&width=90pc)
 ![3331](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/3.png?featherlight=false&width=90pc)
 ![3331](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/2.png?featherlight=false&width=90pc)
+
+2. HiKVision APIs for Monitoring:
+- Overview: 
+Monitoring Hikvision devices using Zabbix involves leveraging Zabbix's capabilities to communicate with Hikvision APIs.
+
+![3331](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/11.png?featherlight=false&width=90pc)
+![3331](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/12.png?featherlight=false&width=90pc)
+![3331](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/13.png?featherlight=false&width=90pc)

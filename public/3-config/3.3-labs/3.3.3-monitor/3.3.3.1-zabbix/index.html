@@ -12,21 +12,21 @@
     <title>Zabbix :: </title>
 
     
-    <link href="/cicd-ws/css/nucleus.css?1714373362" rel="stylesheet">
-    <link href="/cicd-ws/css/fontawesome-all.min.css?1714373362" rel="stylesheet">
-    <link href="/cicd-ws/css/hybrid.css?1714373362" rel="stylesheet">
-    <link href="/cicd-ws/css/featherlight.min.css?1714373362" rel="stylesheet">
-    <link href="/cicd-ws/css/perfect-scrollbar.min.css?1714373362" rel="stylesheet">
-    <link href="/cicd-ws/css/auto-complete.css?1714373362" rel="stylesheet">
-    <link href="/cicd-ws/css/atom-one-dark-reasonable.css?1714373362" rel="stylesheet">
-    <link href="/cicd-ws/css/theme.css?1714373362" rel="stylesheet">
-    <link href="/cicd-ws/css/hugo-theme.css?1714373362" rel="stylesheet">
+    <link href="/cicd-ws/css/nucleus.css?1714373960" rel="stylesheet">
+    <link href="/cicd-ws/css/fontawesome-all.min.css?1714373960" rel="stylesheet">
+    <link href="/cicd-ws/css/hybrid.css?1714373960" rel="stylesheet">
+    <link href="/cicd-ws/css/featherlight.min.css?1714373960" rel="stylesheet">
+    <link href="/cicd-ws/css/perfect-scrollbar.min.css?1714373960" rel="stylesheet">
+    <link href="/cicd-ws/css/auto-complete.css?1714373960" rel="stylesheet">
+    <link href="/cicd-ws/css/atom-one-dark-reasonable.css?1714373960" rel="stylesheet">
+    <link href="/cicd-ws/css/theme.css?1714373960" rel="stylesheet">
+    <link href="/cicd-ws/css/hugo-theme.css?1714373960" rel="stylesheet">
     
-    <link href="/cicd-ws/css/theme-workshop.css?1714373362" rel="stylesheet">
+    <link href="/cicd-ws/css/theme-workshop.css?1714373960" rel="stylesheet">
     
     
 
-    <script src="/cicd-ws/js/jquery-3.3.1.min.js?1714373362"></script>
+    <script src="/cicd-ws/js/jquery-3.3.1.min.js?1714373960"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/cicd-ws/js/lunr.min.js?1714373362"></script>
-<script type="text/javascript" src="/cicd-ws/js/auto-complete.js?1714373362"></script>
+<script type="text/javascript" src="/cicd-ws/js/lunr.min.js?1714373960"></script>
+<script type="text/javascript" src="/cicd-ws/js/auto-complete.js?1714373960"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/cicd-ws\/";
     
 </script>
-<script type="text/javascript" src="/cicd-ws/js/search.js?1714373362"></script>
+<script type="text/javascript" src="/cicd-ws/js/search.js?1714373960"></script>
 
     
   </div>
@@ -1053,9 +1053,7 @@
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>systemctl restart zabbix-server zabbix-agent apache2
 </span></span><span style="display:flex;"><span>systemctl enable zabbix-server zabbix-agent apache2
-</span></span></code></pre></div><ol start="2">
-<li>Zabbix Agent Configuration: run on the monitored devices and send data to the server</li>
-</ol>
+</span></span></code></pre></div><p>Zabbix Agent Configuration: run on the monitored devices and send data to the server</p>
 <ul>
 <li>Installation</li>
 </ul>
@@ -1071,9 +1069,7 @@ vi /etc/zabbix/zabbix_agentd.conf</li>
 </span></span><span style="display:flex;"><span>ServerActive<span style="color:#f92672">=</span>&lt;zabbix dns&gt;
 </span></span><span style="display:flex;"><span>Hostname<span style="color:#f92672">=</span>&lt;zabbix server ip&gt;
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>systemctl restart zabbix-agent
-</span></span></code></pre></div><ol start="3">
-<li>Add Host to Zabbix Server</li>
-</ol>
+</span></span></code></pre></div><p>Add Host to Zabbix Server</p>
 <ul>
 <li>Login</li>
 <li>Add Host
@@ -1087,9 +1083,7 @@ vi /etc/zabbix/zabbix_agentd.conf</li>
 </span></span><span style="display:flex;"><span>-&gt; Add
 </span></span></code></pre></div></li>
 </ul>
-<ol start="4">
-<li>Create Item &amp; Trigger</li>
-</ol>
+<p>Create Item &amp; Trigger</p>
 <ul>
 <li>Item:</li>
 </ul>
@@ -1109,12 +1103,20 @@ vi /etc/zabbix/zabbix_agentd.conf</li>
 </span></span><span style="display:flex;"><span>Expresstion:	Item: App service on server &lt;Host Agent IP&gt;. running on port <span style="color:#ae81ff">8080</span> is unavaiilable
 </span></span><span style="display:flex;"><span>	Result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
 </span></span><span style="display:flex;"><span>	-&gt; Add
-</span></span></code></pre></div><ol start="2">
-<li>Dashboard Overview:</li>
-</ol>
+</span></span></code></pre></div><p>Dashboard Overview:</p>
 <p><img alt="3331" src="/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/4.png?featherlight=false&width=90pc">
 <img alt="3331" src="/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/3.png?featherlight=false&width=90pc">
 <img alt="3331" src="/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/2.png?featherlight=false&width=90pc"></p>
+<ol start="2">
+<li>HiKVision APIs for Monitoring:</li>
+</ol>
+<ul>
+<li>Overview:
+Monitoring Hikvision devices using Zabbix involves leveraging Zabbix&rsquo;s capabilities to communicate with Hikvision APIs.</li>
+</ul>
+<p><img alt="3331" src="/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/11.png?featherlight=false&width=90pc">
+<img alt="3331" src="/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/12.png?featherlight=false&width=90pc">
+<img alt="3331" src="/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/13.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1602,19 +1604,19 @@ vi /etc/zabbix/zabbix_agentd.conf</li>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/cicd-ws/js/clipboard.min.js?1714373362"></script>
-    <script src="/cicd-ws/js/perfect-scrollbar.min.js?1714373362"></script>
-    <script src="/cicd-ws/js/perfect-scrollbar.jquery.min.js?1714373362"></script>
-    <script src="/cicd-ws/js/jquery.sticky.js?1714373362"></script>
-    <script src="/cicd-ws/js/featherlight.min.js?1714373362"></script>
-    <script src="/cicd-ws/js/highlight.pack.js?1714373362"></script>
+    <script src="/cicd-ws/js/clipboard.min.js?1714373960"></script>
+    <script src="/cicd-ws/js/perfect-scrollbar.min.js?1714373960"></script>
+    <script src="/cicd-ws/js/perfect-scrollbar.jquery.min.js?1714373960"></script>
+    <script src="/cicd-ws/js/jquery.sticky.js?1714373960"></script>
+    <script src="/cicd-ws/js/featherlight.min.js?1714373960"></script>
+    <script src="/cicd-ws/js/highlight.pack.js?1714373960"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/cicd-ws/js/modernizr.custom-3.6.0.js?1714373362"></script>
-    <script src="/cicd-ws/js/learn.js?1714373362"></script>
-    <script src="/cicd-ws/js/hugo-learn.js?1714373362"></script>
+    <script src="/cicd-ws/js/modernizr.custom-3.6.0.js?1714373960"></script>
+    <script src="/cicd-ws/js/learn.js?1714373960"></script>
+    <script src="/cicd-ws/js/hugo-learn.js?1714373960"></script>
 
-    <link href="/cicd-ws/mermaid/mermaid.css?1714373362" rel="stylesheet" />
-    <script src="/cicd-ws/mermaid/mermaid.js?1714373362"></script>
+    <link href="/cicd-ws/mermaid/mermaid.css?1714373960" rel="stylesheet" />
+    <script src="/cicd-ws/mermaid/mermaid.js?1714373960"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
