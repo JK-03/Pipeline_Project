@@ -13,8 +13,8 @@ pre : " <b> 3.3.3.4 </b> "
     - **Kibana**: Kibana is the visualization and user interface component of the ELK Stack. It provides a web interface for users to visualize and explore data stored in Elasticsearch.Kibana offers various visualization options, including charts, graphs, maps, and dashboards, allowing users to create custom visualizations and dashboards to gain insights from their data
 
 #### Configuration
-1. Firewall pfSense and ELK Stack
-![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/00.png?featherlight=false&width=50pc)
+Firewall pfSense and ELK Stack
+![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/00.png?featherlight=false&width=90pc)
 - Review: 
   - **pfelk** is a highly customizable open-source tool for ingesting and visualizing your firewall traffic with the full power of Elasticsearch, Logstash and Kibana.
   - Git repo reference: https://github.com/pfelk/pfelk.
@@ -70,16 +70,16 @@ pre : " <b> 3.3.3.4 </b> "
         - Import Dashboard : **https://github.com/pfelk/pfelk/tree/main/etc/pfelk/dashboard**
           - 22.04-firewall.ndjson
           - Options: 22.01-unbound.ndjson; 22.01-captive.ndjson; v20.2-dhcp.ndjson
-     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/5.png?featherlight=false&width=50pc)
-     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/6.png?featherlight=false&width=50pc)
+     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/5.png?featherlight=false&width=90pc)
+     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/6.png?featherlight=false&width=90pc)
 
     - Firewall-Configure: sent log to log server
       - Status > System Logs > Settings
-     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/9.png?featherlight=false&width=50pc)
+     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/9.png?featherlight=false&width=90pc)
 
     - Dashboard view:
-     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/110.png?featherlight=false&width=50pc)
-     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/110.png?featherlight=false&width=50pc)
-     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/120.png?featherlight=false&width=50pc)
+     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/110.png?featherlight=false&width=90pc)
+     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/110.png?featherlight=false&width=90pc)
+     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/120.png?featherlight=false&width=90pc)
     
 Documents: https://docs.google.com/spreadsheets/d/1zewwK5ikojziCHTMt8bzRvbOV1ewgV-UjozBhae1-Lw/edit#gid=274683191
