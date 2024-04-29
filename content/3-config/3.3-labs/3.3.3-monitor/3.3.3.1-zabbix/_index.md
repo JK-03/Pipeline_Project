@@ -9,6 +9,7 @@ pre : " <b> 3.3.3.1 </b> "
 #### Overview
 - Zabbix is an open-source monitoring software tool designed to track the status of various network services, servers, and other network hardware.
 - It provides real-time monitoring, alerting, and visualization of metrics such as CPU load, network utilization, disk space, and more.
+![3331](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/1.png?featherlight=false&width=90pc)
 
 #### Configuration
 1. Zabbix Server Configuration: collects and processes data
@@ -107,3 +108,9 @@ Expresstion:	Item: App service on server <Host Agent IP>. running on port 8080 i
 	Result = 0
 	-> Add
 ````
+
+2. Dashboard Overview:
+
+![3331](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/4.png?featherlight=false&width=90pc)
+![3331](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/3.png?featherlight=false&width=90pc)
+![3331](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/2.png?featherlight=false&width=90pc)
