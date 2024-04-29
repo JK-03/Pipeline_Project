@@ -172,7 +172,7 @@
 	"title": "Monitoring",
 	"tags": [],
 	"description": "",
-	"content": "Monitoring is processing \u0026hellip;.\nContent Zabbix Prometheus Monitoring ELK Stack "
+	"content": "Monitoring is processing \u0026hellip;.\nContent Zabbix Prometheus Grafana ELK Stack "
 },
 {
 	"uri": "http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.4-security/",

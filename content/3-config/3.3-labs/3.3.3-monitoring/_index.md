@@ -12,5 +12,5 @@ Monitoring is processing ....
 
 1. [Zabbix](3.3.3.1-zabbix/)
 2. [Prometheus](3.3.3.2-prometheus/)
-3. [Monitoring](3.3.3.3-grafana/)
+3. [Grafana](3.3.3.3-grafana/)
 4. [ELK Stack](3.3.3.4-elk/)

@@ -14,7 +14,7 @@ pre : " <b> 3.3.3.4 </b> "
 
 #### Configuration
 1. Firewall pfSense and ELK Stack
-![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/0.jpg)
+![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/00.png?featherlight=false&width=50pc)
 - Review: 
   - **pfelk** is a highly customizable open-source tool for ingesting and visualizing your firewall traffic with the full power of Elasticsearch, Logstash and Kibana.
   - Git repo reference: https://github.com/pfelk/pfelk.
