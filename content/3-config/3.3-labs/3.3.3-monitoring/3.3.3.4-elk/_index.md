@@ -70,16 +70,16 @@ pre : " <b> 3.3.3.4 </b> "
         - Import Dashboard : **https://github.com/pfelk/pfelk/tree/main/etc/pfelk/dashboard**
           - 22.04-firewall.ndjson
           - Options: 22.01-unbound.ndjson; 22.01-captive.ndjson; v20.2-dhcp.ndjson
-     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/5.png)
-     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/6.png)
+     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/5.png?featherlight=false&width=50pc)
+     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/6.png?featherlight=false&width=50pc)
 
     - Firewall-Configure: sent log to log server
       - Status > System Logs > Settings
-     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/9.png)
+     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/9.png?featherlight=false&width=50pc)
 
     - Dashboard view:
-     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/10.jpg)
-     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/11.jpg)
-     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/12.jpg)
+     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/110.png?featherlight=false&width=50pc)
+     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/110.png?featherlight=false&width=50pc)
+     ![3334](/cicd-ws/images/3-config/3.3-labs/3.3.3-monitor/3.3.3.4-elk/120.png?featherlight=false&width=50pc)
     
 Documents: https://docs.google.com/spreadsheets/d/1zewwK5ikojziCHTMt8bzRvbOV1ewgV-UjozBhae1-Lw/edit#gid=274683191
