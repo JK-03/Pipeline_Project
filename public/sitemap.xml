@@ -10,6 +10,8 @@
   </url><url>
     <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.4-security/3.3.4.1-firewall/</loc>
   </url><url>
+    <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.5-linux/3.3.5.1-frontend/</loc>
+  </url><url>
     <loc>http://localhost:1313/cicd-ws/3-config/3.1-ec2/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/1-intro/</loc>
@@ -21,6 +23,8 @@
     <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.1-jenkins/3.3.1.2-advanced/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/2-prepair/2.2-aws/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.5-linux/3.3.5.2-backend/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/3-config/3.2-cicd/</loc>
   </url><url>
@@ -59,6 +63,8 @@
     <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.3-monitor/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.4-security/</loc>
+  </url><url>
+    <loc>http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.5-linux/</loc>
   </url><url>
     <loc>http://localhost:1313/cicd-ws/categories/</loc>
   </url><url>

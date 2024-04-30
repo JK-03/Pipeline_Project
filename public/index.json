@@ -28,6 +28,13 @@
 	"content": "Firewall security is processing \u0026hellip;.\npfSense: ntop-ng pfSense is an open-source firewall and router software distribution based on FreeBSD. It offers a wide range of features, including firewall functionality, routing, VPN support, and more. One of the powerful add-ons available for pfSense is ntopng (NTOP Next Generation), which provides deep packet inspection and traffic analysis capabilities. ntop-ng will monitoring network traffic and identifying potential security threats or policy violations, ntopng helps enhance network security and ensures compliance with regulatory requirements. It can detect suspicious activities, malware infections, unauthorized access attempts, and other security incidents in real-time. Overview Configuration Dashboard "
 },
 {
+	"uri": "http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.5-linux/3.3.5.1-frontend/",
+	"title": "Frontend",
+	"tags": [],
+	"description": "",
+	"content": "Overview Vagrant and Oracle VM Vitualbox Manager\nConfiguration Server name: machine1 - IP: 192.168.33.100\nPS D:\\LAB\\Vagrant\u0026gt; vagrant up machine1\rvagrant ssh machine1 Copy source to machine: scp -i d:\\LAB\\Vagrant\\.vagrant\\machines\\machine1\\virtualbox\\private_key \\LAB\\Vagrant\\datas\\todolist.zip vagrant@192.168.33.100:/home/vagrant Setup: sudo -i\rapt update\rapt install unzip\runzip todolist.zip\rmkdir /projects\rmv todolist /projects\rls -l /projects Add user for project: adduser todolist\rchown -R todolist:todolist /projects/todolist\rchmod -R 750 /projects/todolist Run Project: VUE Source :\nhttps://vuejs.org/guide/quick-start Prerequisites: Node.js - https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04 Install Aplication\napt update\rapt install nodejs\rapt install npm Configure foler and user\nsudo todolist\rcd /projects/todolist Review configure file:\npackage.json {\r\u0026#34;name\u0026#34;: \u0026#34;todolist\u0026#34;,\r\u0026#34;version\u0026#34;: \u0026#34;0.1.0\u0026#34;,\r\u0026#34;private\u0026#34;: true,\r\u0026#34;scripts\u0026#34;: {\r\u0026#34;serve\u0026#34;: \u0026#34;vue-cli-service serve\u0026#34;, \u0026#34;build\u0026#34;: \u0026#34;vue-cli-service build\u0026#34;\r},\r\u0026#34;dependencies\u0026#34;: {\r\u0026#34;bootstrap-vue\u0026#34;: \u0026#34;^2.22.0\u0026#34;,\r\u0026#34;core-js\u0026#34;: \u0026#34;^3.8.3\u0026#34;,\r\u0026#34;vue\u0026#34;: \u0026#34;^2.6.14\u0026#34;,\r\u0026#34;vue-router\u0026#34;: \u0026#34;^3.5.1\u0026#34;\r},\r\u0026#34;devDependencies\u0026#34;: {\r\u0026#34;@vue/cli-plugin-babel\u0026#34;: \u0026#34;~5.0.0\u0026#34;,\r\u0026#34;@vue/cli-plugin-router\u0026#34;: \u0026#34;~5.0.0\u0026#34;,\r\u0026#34;@vue/cli-service\u0026#34;: \u0026#34;~5.0.0\u0026#34;,\r\u0026#34;vue-template-compiler\u0026#34;: \u0026#34;^2.6.14\u0026#34;\r},\r\u0026#34;browserslist\u0026#34;: [\r\u0026#34;\u0026gt; 1%\u0026#34;,\r\u0026#34;last 2 versions\u0026#34;,\r\u0026#34;not dead\u0026#34;\r]\r} vue.config.js const { defineConfig } = require(\u0026#39;@vue/cli-service\u0026#39;)\rmodule.exports = defineConfig({\rtranspileDependencies: true\r})\rmodule.exports = {\rdevServer: {\rport: 3000\r},\r}; Run project\nnpm install\rnpm run build ISSUE: version Fix ISSUE: Update same version or latest\ncurl -s https://deb.nodesource.com/setup_18.x | sudo bash\rsudo apt install nodejs -y\rnode -v\rnpm run build Project will build file or folder. In this project VUE will build to a folder is : dist\nWe have 3 way to run a Fontend project: Webserver - Services - Pm2\nnpm run serve "
+},
+{
 	"uri": "http://localhost:1313/cicd-ws/3-config/3.1-ec2/",
 	"title": "IaC",
 	"tags": [],
@@ -46,7 +53,7 @@
 	"title": "Workflow",
 	"tags": [],
 	"description": "",
-	"content": "Gitlab-Server "
+	"content": "Gitlab-Server Repo: shoeshop\nNew branch:\nBranch name: develop -\u0026gt; Create from: main Branch name: feature/frontend/login -\u0026gt; Create from: develop Branch name: feature/backend/login -\u0026gt; Create from: develop Set permission approve : http://gitlab.local.test/shoeshop/shoeshop/-/settings/repository\nProtected branches :\nBranch: Allowed to merge develop\t- Maintainers - Maintainers main\t- Maintainers\t- No one Default branch : develop (for Developer Teams)\nNew branch:\nBranch name: staging -\u0026gt; Create from: develop Protected branches : Branch: Allowed to merge staging\t- Maintainers - Maintainers Permission testing Edit repo: http://gitlab.local.test/shoeshop/shoeshop/-/new/develop/ User: tuanta New file: config.txt Commit: config(database): modify connection Target branch: develop -\u0026gt; OK Edit repo: http://gitlab.local.test/shoeshop/shoeshop/-/new/main/ User: tuanta New file: config.txt Commit: config(database): modify connection ISSUE: -\u0026gt; You are not allowed to push into this branch "
 },
 {
 	"uri": "http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.3-monitor/3.3.3.1-zabbix/",
@@ -68,6 +75,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Amazon Web Services (AWS) is a comprehensive and widely used cloud computing platform provided by Amazon. It offers a vast array of services, allowing individuals and businesses to build and deploy scalable applications and services without the need to invest in physical infrastructure\nOverview AWS CLI : The AWS Command Line Interface (CLI) is a powerful tool provided by Amazon Web Services (AWS) that allows you to interact with AWS services directly from your command line or terminal It provides a convenient and scriptable way to manage your AWS resources without needing to use the AWS Management Console Configuration Prepair and run docker compose file\ndocker-compose run --rm aws --version AWS: Create keypair to access AWS Instances: tf-cli-keypair.pem\ndocker-compose run --rm aws ec2 create-key-pair --key-name tf-cli-keypair --query \u0026#39;KeyMaterial\u0026#39; --output text \u0026gt; tf-cli-keypair.pem Create AWS Account for Terraform use AWS CLI: tf-cli\ndocker-compose run --rm aws iam create-user --user-name tf-cli AWS Checking keypair: Create Access Key \u0026amp; export to local\ndocker-compose run --rm aws iam create-access-key --user-name tf-cli \u0026gt; tf_cli-access_key.json Create policy and configure to allow access EC2 and Limit Region\nCreate a custom policy file: ec2-limited-access-policy.json {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: \u0026#34;ec2:*\u0026#34;,\r\u0026#34;Resource\u0026#34;: \u0026#34;*\u0026#34;,\r\u0026#34;Condition\u0026#34;: {\r\u0026#34;StringEquals\u0026#34;: {\r\u0026#34;ec2:Region\u0026#34;: \u0026#34;ap-southeast-1\u0026#34;\r}\r}\r}\r]\r} Create a IAM policy: EC2FullAccessAPSouthEast1 docker-compose run --rm aws iam create-policy --policy-name EC2FullAccessAPSouthEast1 --policy-document file://ec2-limited-access-policy.json Attach the Policy to the IAM User: (tf-cli) docker-compose run --rm aws iam attach-user-policy --user-name tf-cli --policy-arn arn:aws:iam::637423373411:policy/EC2FullAccessAPSouthEast1 AWS Checking User: "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.5-linux/3.3.5.2-backend/",
+	"title": "Backend",
+	"tags": [],
+	"description": "",
+	"content": "Firewall security is processing \u0026hellip;.\npfSense: ntop-ng pfSense is an open-source firewall and router software distribution based on FreeBSD. It offers a wide range of features, including firewall functionality, routing, VPN support, and more. One of the powerful add-ons available for pfSense is ntopng (NTOP Next Generation), which provides deep packet inspection and traffic analysis capabilities. ntop-ng will monitoring network traffic and identifying potential security threats or policy violations, ntopng helps enhance network security and ensures compliance with regulatory requirements. It can detect suspicious activities, malware infections, unauthorized access attempts, and other security incidents in real-time. Overview Configuration Dashboard "
 },
 {
 	"uri": "http://localhost:1313/cicd-ws/3-config/3.2-cicd/",
@@ -95,7 +109,7 @@
 	"title": "Runner",
 	"tags": [],
 	"description": "",
-	"content": "Updating \u0026hellip;.\n"
+	"content": "GitLab Runner is a lightweight agent that runs jobs defined in your GitLab CI/CD pipelines. It works by listening for jobs that need to be executed and then runs them in a specified environment.\nLab-Server Install sudo apt-get update\rcurl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash\rsudo apt install gitlab-runner\rgitlab-runner -v Edit hostname: vi /etc/hosts gitlab.local.test \u0026lt;ip\u0026gt; Configuration: gitlab-runner register Enter the GitLab instance: http://gitlab.local.test/\rEnter the registration token:\rEnter a description for the runner: lab-server\rEnter tags for the runner: lab-server\rEnter optional maintenance note for the runner: \u0026lt;enter\u0026gt;\rexecutor: shell vi /etc/gitlab-runner/config.toml\nconcurrent = 4 -\u0026gt; use 4 robot runner Start Runner nohup gitlab-runner run --working-directory /home/gitlab-runner/ --config /etc/gitlab-runner/config.toml --service gitlab-runner --user gitlab-runner 2\u0026gt;\u0026amp;1 \u0026amp;\rps -ef | grep gitlab-runner Gitlab-Server CICD Settings: http://gitlab.local.test/shoeshop/shoeshop/-/settings/ci_cd\nEdit: http://gitlab.local.test/shoeshop/shoeshop/-/runners/2/edit Uncheck : When a runner is locked \u0026hellip;. Branch: develop - Allowed to push: Maintainers Create CICD file: .gitlab-ci.yml \u0026amp; Commit: Configure(pipeline): add runner\nstages:\r- build\r- deploy\r- checking\rbuild:\rstage: build\rscript:\r- whoami\r- pwd\r- ls\rtags:\r- jenkins-server Checking Gitlab-Server:\nJobs Lab-Server:\nFolder: -\u0026gt; /home/gitlab-runner/builds/1fijYgCS/0/shoeshop/shoeshop "
 },
 {
 	"uri": "http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.2-gitlab/3.3.2.3-cicd/",
@@ -201,6 +215,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Security is processing \u0026hellip;.\nContent Firewall "
+},
+{
+	"uri": "http://localhost:1313/cicd-ws/3-config/3.3-labs/3.3.5-linux/",
+	"title": "Linux",
+	"tags": [],
+	"description": "",
+	"content": "Project:\nFrontend: Vuejs Backend: Shoeshop Source:\nshoeshop-ecommerce.zip\rtodolist.zip\rvision.zip vi /etc/hosts\nmachine1\tlab-server\t192.168.33.100 lab.local.test\rmachine2\tgitlab-server\t192.168.33.110 gitlab.local.test\rmachine3\tmonitor-server\t192.168.33.120 monitor.local.test Working folder:\n/projects Project process :\n1- Tools 2- Configuration files 3- Steps: build \u0026amp; run .\nSecurity: separate folder and user for each project\nContent Frontend Backend "
 },
 {
 	"uri": "http://localhost:1313/cicd-ws/categories/",
