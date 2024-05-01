@@ -27,7 +27,7 @@ We will use local environment with **Vagrant** and **VirtualBox** to test best p
   - Memory: 2048 Mb
   
 **Vagrantfile**
-```vagrantfile
+```sh
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 

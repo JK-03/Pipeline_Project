@@ -12,21 +12,21 @@
     <title>Local :: </title>
 
     
-    <link href="/cicd-ws/css/nucleus.css?1714532272" rel="stylesheet">
-    <link href="/cicd-ws/css/fontawesome-all.min.css?1714532272" rel="stylesheet">
-    <link href="/cicd-ws/css/hybrid.css?1714532272" rel="stylesheet">
-    <link href="/cicd-ws/css/featherlight.min.css?1714532272" rel="stylesheet">
-    <link href="/cicd-ws/css/perfect-scrollbar.min.css?1714532272" rel="stylesheet">
-    <link href="/cicd-ws/css/auto-complete.css?1714532272" rel="stylesheet">
-    <link href="/cicd-ws/css/atom-one-dark-reasonable.css?1714532272" rel="stylesheet">
-    <link href="/cicd-ws/css/theme.css?1714532272" rel="stylesheet">
-    <link href="/cicd-ws/css/hugo-theme.css?1714532272" rel="stylesheet">
+    <link href="/cicd-ws/css/nucleus.css?1714532773" rel="stylesheet">
+    <link href="/cicd-ws/css/fontawesome-all.min.css?1714532773" rel="stylesheet">
+    <link href="/cicd-ws/css/hybrid.css?1714532773" rel="stylesheet">
+    <link href="/cicd-ws/css/featherlight.min.css?1714532773" rel="stylesheet">
+    <link href="/cicd-ws/css/perfect-scrollbar.min.css?1714532773" rel="stylesheet">
+    <link href="/cicd-ws/css/auto-complete.css?1714532773" rel="stylesheet">
+    <link href="/cicd-ws/css/atom-one-dark-reasonable.css?1714532773" rel="stylesheet">
+    <link href="/cicd-ws/css/theme.css?1714532773" rel="stylesheet">
+    <link href="/cicd-ws/css/hugo-theme.css?1714532773" rel="stylesheet">
     
-    <link href="/cicd-ws/css/theme-workshop.css?1714532272" rel="stylesheet">
+    <link href="/cicd-ws/css/theme-workshop.css?1714532773" rel="stylesheet">
     
     
 
-    <script src="/cicd-ws/js/jquery-3.3.1.min.js?1714532272"></script>
+    <script src="/cicd-ws/js/jquery-3.3.1.min.js?1714532773"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/cicd-ws/js/lunr.min.js?1714532272"></script>
-<script type="text/javascript" src="/cicd-ws/js/auto-complete.js?1714532272"></script>
+<script type="text/javascript" src="/cicd-ws/js/lunr.min.js?1714532773"></script>
+<script type="text/javascript" src="/cicd-ws/js/auto-complete.js?1714532773"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/cicd-ws\/";
     
 </script>
-<script type="text/javascript" src="/cicd-ws/js/search.js?1714532272"></script>
+<script type="text/javascript" src="/cicd-ws/js/search.js?1714532773"></script>
 
     
   </div>
@@ -640,48 +640,48 @@
 </li>
 </ul>
 <p><strong>Vagrantfile</strong></p>
-<pre tabindex="0"><code class="language-vagrantfile" data-lang="vagrantfile"># -*- mode: ruby -*-
-# vi: set ft=ruby :
-
-Vagrant.configure(&#34;2&#34;) do |config|
-
-  config.vm.box = &#34;ubuntu/focal64&#34;
-
-  # Configuration for the first virtual machine
-  config.vm.define &#34;machine1&#34; do |machine1|
-    machine1.vm.network &#34;private_network&#34;, ip: &#34;192.168.33.100&#34;
-    machine1.vm.hostname = &#34;linux-server&#34;
-    machine1.vm.provider &#34;virtualbox&#34; do |vb|
-      vb.memory = &#34;2048&#34;
-    end
-    machine1.vm.synced_folder &#34;./datas&#34;, &#34;/vagrant_data&#34;    
-  end
-
-  # Configuration for the second virtual machine
-  config.vm.define &#34;machine2&#34; do |machine2|
-    machine2.vm.network &#34;private_network&#34;, ip: &#34;192.168.33.110&#34;
-    machine2.vm.hostname = &#34;jenkins-server&#34;
-    machine2.vm.provider &#34;virtualbox&#34; do |vb|
-      vb.memory = &#34;5120&#34;
-    end
-    machine2.vm.synced_folder &#34;./datas&#34;, &#34;/vagrant_data&#34;
-  end
-
-  # Configuration for the third virtual machine
-  config.vm.define &#34;machine3&#34; do |machine3|
-    machine3.vm.network &#34;private_network&#34;, ip: &#34;192.168.33.120&#34;
-    machine3.vm.hostname = &#34;monitor-server&#34;
-    machine3.vm.provider &#34;virtualbox&#34; do |vb|
-      vb.memory = &#34;2048&#34;
-    end
-    machine3.vm.synced_folder &#34;./datas&#34;, &#34;/vagrant_data&#34;    
-    machine3.vm.provision &#34;shell&#34;, inline: &lt;&lt;-SHELL
-      apt-get update
-    SHELL
-  end
-
-end
-</code></pre><p><strong>Installation</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># -*- mode: ruby -*-</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># vi: set ft=ruby :</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Vagrant.configure<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">do</span> |config|
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  config.vm.box <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ubuntu/focal64&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Configuration for the first virtual machine</span>
+</span></span><span style="display:flex;"><span>  config.vm.define <span style="color:#e6db74">&#34;machine1&#34;</span> <span style="color:#66d9ef">do</span> |machine1|
+</span></span><span style="display:flex;"><span>    machine1.vm.network <span style="color:#e6db74">&#34;private_network&#34;</span>, ip: <span style="color:#e6db74">&#34;192.168.33.100&#34;</span>
+</span></span><span style="display:flex;"><span>    machine1.vm.hostname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;linux-server&#34;</span>
+</span></span><span style="display:flex;"><span>    machine1.vm.provider <span style="color:#e6db74">&#34;virtualbox&#34;</span> <span style="color:#66d9ef">do</span> |vb|
+</span></span><span style="display:flex;"><span>      vb.memory <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2048&#34;</span>
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>    machine1.vm.synced_folder <span style="color:#e6db74">&#34;./datas&#34;</span>, <span style="color:#e6db74">&#34;/vagrant_data&#34;</span>    
+</span></span><span style="display:flex;"><span>  end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Configuration for the second virtual machine</span>
+</span></span><span style="display:flex;"><span>  config.vm.define <span style="color:#e6db74">&#34;machine2&#34;</span> <span style="color:#66d9ef">do</span> |machine2|
+</span></span><span style="display:flex;"><span>    machine2.vm.network <span style="color:#e6db74">&#34;private_network&#34;</span>, ip: <span style="color:#e6db74">&#34;192.168.33.110&#34;</span>
+</span></span><span style="display:flex;"><span>    machine2.vm.hostname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jenkins-server&#34;</span>
+</span></span><span style="display:flex;"><span>    machine2.vm.provider <span style="color:#e6db74">&#34;virtualbox&#34;</span> <span style="color:#66d9ef">do</span> |vb|
+</span></span><span style="display:flex;"><span>      vb.memory <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;5120&#34;</span>
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>    machine2.vm.synced_folder <span style="color:#e6db74">&#34;./datas&#34;</span>, <span style="color:#e6db74">&#34;/vagrant_data&#34;</span>
+</span></span><span style="display:flex;"><span>  end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Configuration for the third virtual machine</span>
+</span></span><span style="display:flex;"><span>  config.vm.define <span style="color:#e6db74">&#34;machine3&#34;</span> <span style="color:#66d9ef">do</span> |machine3|
+</span></span><span style="display:flex;"><span>    machine3.vm.network <span style="color:#e6db74">&#34;private_network&#34;</span>, ip: <span style="color:#e6db74">&#34;192.168.33.120&#34;</span>
+</span></span><span style="display:flex;"><span>    machine3.vm.hostname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;monitor-server&#34;</span>
+</span></span><span style="display:flex;"><span>    machine3.vm.provider <span style="color:#e6db74">&#34;virtualbox&#34;</span> <span style="color:#66d9ef">do</span> |vb|
+</span></span><span style="display:flex;"><span>      vb.memory <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2048&#34;</span>
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>    machine3.vm.synced_folder <span style="color:#e6db74">&#34;./datas&#34;</span>, <span style="color:#e6db74">&#34;/vagrant_data&#34;</span>    
+</span></span><span style="display:flex;"><span>    machine3.vm.provision <span style="color:#e6db74">&#34;shell&#34;</span>, inline: <span style="color:#e6db74">&lt;&lt;-SHELL
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      apt-get update
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    SHELL</span>
+</span></span><span style="display:flex;"><span>  end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p><strong>Installation</strong></p>
 <ul>
 <li>
 <p><strong>vagrant up</strong>
@@ -982,19 +982,19 @@ end
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/cicd-ws/js/clipboard.min.js?1714532272"></script>
-    <script src="/cicd-ws/js/perfect-scrollbar.min.js?1714532272"></script>
-    <script src="/cicd-ws/js/perfect-scrollbar.jquery.min.js?1714532272"></script>
-    <script src="/cicd-ws/js/jquery.sticky.js?1714532272"></script>
-    <script src="/cicd-ws/js/featherlight.min.js?1714532272"></script>
-    <script src="/cicd-ws/js/highlight.pack.js?1714532272"></script>
+    <script src="/cicd-ws/js/clipboard.min.js?1714532773"></script>
+    <script src="/cicd-ws/js/perfect-scrollbar.min.js?1714532773"></script>
+    <script src="/cicd-ws/js/perfect-scrollbar.jquery.min.js?1714532773"></script>
+    <script src="/cicd-ws/js/jquery.sticky.js?1714532773"></script>
+    <script src="/cicd-ws/js/featherlight.min.js?1714532773"></script>
+    <script src="/cicd-ws/js/highlight.pack.js?1714532773"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/cicd-ws/js/modernizr.custom-3.6.0.js?1714532272"></script>
-    <script src="/cicd-ws/js/learn.js?1714532272"></script>
-    <script src="/cicd-ws/js/hugo-learn.js?1714532272"></script>
+    <script src="/cicd-ws/js/modernizr.custom-3.6.0.js?1714532773"></script>
+    <script src="/cicd-ws/js/learn.js?1714532773"></script>
+    <script src="/cicd-ws/js/hugo-learn.js?1714532773"></script>
 
-    <link href="/cicd-ws/mermaid/mermaid.css?1714532272" rel="stylesheet" />
-    <script src="/cicd-ws/mermaid/mermaid.js?1714532272"></script>
+    <link href="/cicd-ws/mermaid/mermaid.css?1714532773" rel="stylesheet" />
+    <script src="/cicd-ws/mermaid/mermaid.js?1714532773"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -24,7 +24,7 @@ In this Workshop we will create an EC2 instances with the information bellow
 
 Security credential variables:  **variables.tf**
 
-```dockercompose
+```sh
 variable "access_key" {
   type        = string
   sensitive   = true
@@ -42,7 +42,7 @@ variable "region" {
 ```
 Instances configurations :**main.tf**
 
-```main
+```sh
 variable vpc_cidr_block {}
 variable subnet_1_cidr_block {}
 variable avail_zone {}
@@ -148,7 +148,7 @@ resource "aws_instance" "myapp-server" {
 ```
 Terraform provider **AWS** :  **terraform.tfvars**
 
-```tfvars
+```sh
 # Network and Instance variables
 vpc_cidr_block = "10.0.0.0/16"
 subnet_1_cidr_block = "10.0.1.0/24"
