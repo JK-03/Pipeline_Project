@@ -17,7 +17,7 @@ jobs:
           node-version: '14'
 
       - name: Install ESLint
-        run: npm install eslint@latest --save-dev
+        run: npm install eslint@7.32.0 --save-dev
 
       - name: Run ESLint
         run: npx eslint .
