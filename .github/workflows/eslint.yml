@@ -17,7 +17,7 @@ jobs:
           node-version: '14'
 
       - name: Install ESLint and Config
-        run: npm install eslint@7.32.0 eslint-config-airbnb@18.2.1 --save-dev
-
+        run: npm install eslint-plugin-jsx-a11y@latest --save-dev
+        
       - name: Run ESLint
         run: npx eslint .
