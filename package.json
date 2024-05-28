@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "mkdir -p dist && cp -r app/* dist/"
+    "build": "mkdir -p dist && cp -r archetypes/* content/* layouts/* themes/* static/* dist/"
   },
   "dependencies": {
     "express": "^4.17.1"
