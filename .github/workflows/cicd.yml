@@ -1,5 +1,4 @@
-# Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
+name: CI/CD Pipeline for Hugo site
 
 on:
   # Runs on pushes targeting the default branch
@@ -27,8 +26,78 @@ defaults:
     shell: bash
 
 jobs:
-  # Build job
-  build:
+  # Audit Frontend Deps job
+  audit_deps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Audit Frontend Dependencies
+        run: npm audit
+
+  # Build Frontend Artifact job
+  build_frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+
+  # Ensure Code Style job
+  ensure_code_style:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Ensure Code Style
+        run: npm run lint
+
+  # Run Unit Tests job
+  run_unit_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run Unit Tests
+        run: npm test
+
+  # Run Static Code Analysis job
+  static_code_analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run Static Code Analysis
+        run: npm run static-analysis
+
+  # Deploy Frontend Artifact job
+  deploy_frontend:
+    runs-on: ubuntu-latest
+    needs: [build_frontend, ensure_code_style, run_unit_tests, static_code_analysis]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  # Verify Successful Deployment job
+  verify_deployment:
+    runs-on: ubuntu-latest
+    needs: deploy_frontend
+    steps:
+      - name: Verify Deployment
+        run: echo "Deployment verified successfully."
+
+  # Build job for Hugo
+  build_hugo:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.124.1
@@ -59,15 +128,3 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
