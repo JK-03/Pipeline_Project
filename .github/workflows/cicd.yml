@@ -60,7 +60,7 @@ jobs:
         run: npm run build
 
   # Ensure Code Style job
-ensure_code_style:
+  ensure_code_style:
   runs-on: ubuntu-latest
   needs: [build_frontend]
   steps:
@@ -74,7 +74,7 @@ ensure_code_style:
       run: npm install eslint --save-dev
     - name: Run ESLint
       run: npx eslint .
-
+      
   # Run Unit Tests job
   run_unit_tests:
     runs-on: ubuntu-latest
