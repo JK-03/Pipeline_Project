@@ -27,7 +27,7 @@ defaults:
 
 jobs:
   # Audit Frontend Deps job
-  name: Audit Deps
+  audit_deps:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
