@@ -20,7 +20,7 @@ jobs:
         run: |
           npm install eslint-plugin-jsx-a11y@latest --save-dev
           npx install-peerdeps --dev eslint-config-airbnb
-
+          npm install react
         
       - name: Run ESLint
         run: npx eslint .
