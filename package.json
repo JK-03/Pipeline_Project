@@ -1,14 +1,13 @@
 {
-  "name": "my-nodejs-app",
-  "version": "1.0.0",
-  "description": "A sample Node.js application",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "build": "mkdir -p dist && cp -r archetypes/* content/* layouts/* themes/* static/* dist/",
-    "lint": "eslint ."
+  "extends": "eslint-config-airbnb",
+  "plugins": ["jsx-a11y"],
+  "env": {
+    "browser": true,
+    "jest": true
   },
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-no-bind": "off"
+  }  
 }
