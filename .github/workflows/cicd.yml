@@ -27,7 +27,7 @@ defaults:
 
 jobs:
   # Audit Frontend Deps job
-  audit_deps:
+  name: Audit Deps
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -46,6 +46,7 @@ jobs:
   # Build Frontend Artifact job
   build_frontend:
     runs-on: ubuntu-latest
+    needs: [audit_deps]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -61,6 +62,7 @@ jobs:
   # Ensure Code Style job
   ensure_code_style:
     runs-on: ubuntu-latest
+    needs: [build_frontend]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -70,6 +72,7 @@ jobs:
   # Run Unit Tests job
   run_unit_tests:
     runs-on: ubuntu-latest
+    needs: [build_frontend]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -79,6 +82,7 @@ jobs:
   # Run Static Code Analysis job
   static_code_analysis:
     runs-on: ubuntu-latest
+    needs: [build_frontend]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -88,7 +92,7 @@ jobs:
   # Deploy Frontend Artifact job
   deploy_frontend:
     runs-on: ubuntu-latest
-    needs: [build_frontend, ensure_code_style, run_unit_tests, static_code_analysis]
+    needs: [ensure_code_style, run_unit_tests, static_code_analysis]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -99,7 +103,7 @@ jobs:
   # Verify Successful Deployment job
   verify_deployment:
     runs-on: ubuntu-latest
-    needs: deploy_frontend
+    needs: [deploy_frontend]
     steps:
       - name: Verify Deployment
         run: echo "Deployment verified successfully."
@@ -107,6 +111,7 @@ jobs:
   # Build job for Hugo
   build_hugo:
     runs-on: ubuntu-latest
+    needs: [verify_deployment]
     env:
       HUGO_VERSION: 0.124.1
     steps:
