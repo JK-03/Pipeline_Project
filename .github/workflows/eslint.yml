@@ -17,7 +17,7 @@ jobs:
           node-version: '14'
 
       - name: Install ESLint and Config
-        run: npm install eslint-plugin-jsx-a11y@latest --save-dev
+        run: npm install eslint@6.8.0 eslint-plugin-jsx-a11y@latest --save-dev
         
       - name: Run ESLint
         run: npx eslint .
