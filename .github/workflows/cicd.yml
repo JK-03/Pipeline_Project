@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for Hugo site
+name: CI/CD Pipeline
 
 on:
   # Runs on pushes targeting the default branch
@@ -32,6 +32,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Check if package.json exists
+        run: test -f package.json || { echo "package.json not found"; exit 1; }
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
